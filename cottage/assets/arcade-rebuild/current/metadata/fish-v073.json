@@ -1,0 +1,4477 @@
+{
+  "version": "rebuild-v073-ufo-water-fishing-completion",
+  "generatedAt": "2026-08-11T20:41:56.449Z",
+  "lifecycleStates": [
+    "base",
+    "fight",
+    "hang",
+    "held",
+    "free"
+  ],
+  "sizes": {
+    "regular": {
+      "selectionWeight": 0.5,
+      "runtimeScale": 1
+    },
+    "large": {
+      "selectionWeight": 0.5,
+      "runtimeScale": 1
+    }
+  },
+  "species": {
+    "bass": {
+      "anatomyCue": "large mouth, broad body, dorsal structure, pectoral plus pelvic/anal fins",
+      "sizes": {
+        "regular": {
+          "selectionWeight": 0.5,
+          "states": {
+            "base": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 48,
+                "height": 57
+              },
+              "alphaBBox": [
+                20,
+                20,
+                29,
+                37
+              ],
+              "alphaSize": {
+                "width": 9,
+                "height": 17
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 19,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 24,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 24.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.510417,
+                  "y": 0.350877
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.510417,
+                "y": 0.350877
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 12,
+              "finPixels": [
+                [
+                  28,
+                  27
+                ],
+                [
+                  28,
+                  28
+                ],
+                [
+                  27,
+                  30
+                ],
+                [
+                  27,
+                  31
+                ]
+              ],
+              "anatomyCue": "large mouth, broad body, dorsal structure, pectoral plus pelvic/anal fins"
+            },
+            "fight": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 57,
+                "height": 48
+              },
+              "alphaBBox": [
+                20,
+                20,
+                37,
+                29
+              ],
+              "alphaSize": {
+                "width": 17,
+                "height": 9
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 19
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 36,
+                  "y": 24
+                },
+                "pixel": {
+                  "x": 37,
+                  "y": 24.5
+                },
+                "normalized": {
+                  "x": 0.649123,
+                  "y": 0.510417
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.649123,
+                "y": 0.510417
+              },
+              "rotation": -1.5707963267948966,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 9,
+              "finPixels": [
+                [
+                  27,
+                  28
+                ],
+                [
+                  28,
+                  28
+                ],
+                [
+                  30,
+                  28
+                ],
+                [
+                  31,
+                  28
+                ]
+              ],
+              "anatomyCue": "large mouth, broad body, dorsal structure, pectoral plus pelvic/anal fins"
+            },
+            "hang": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 48,
+                "height": 57
+              },
+              "alphaBBox": [
+                20,
+                20,
+                29,
+                37
+              ],
+              "alphaSize": {
+                "width": 9,
+                "height": 17
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 19,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 24,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 24.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.510417,
+                  "y": 0.350877
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.510417,
+                "y": 0.350877
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 12,
+              "finPixels": [
+                [
+                  28,
+                  27
+                ],
+                [
+                  28,
+                  28
+                ],
+                [
+                  27,
+                  30
+                ],
+                [
+                  27,
+                  31
+                ]
+              ],
+              "anatomyCue": "large mouth, broad body, dorsal structure, pectoral plus pelvic/anal fins"
+            },
+            "held": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 48,
+                "height": 57
+              },
+              "alphaBBox": [
+                20,
+                20,
+                29,
+                37
+              ],
+              "alphaSize": {
+                "width": 9,
+                "height": 17
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 19,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 24,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 24.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.510417,
+                  "y": 0.350877
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.510417,
+                "y": 0.350877
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 12,
+              "finPixels": [
+                [
+                  28,
+                  27
+                ],
+                [
+                  28,
+                  28
+                ],
+                [
+                  27,
+                  30
+                ],
+                [
+                  27,
+                  31
+                ]
+              ],
+              "anatomyCue": "large mouth, broad body, dorsal structure, pectoral plus pelvic/anal fins"
+            },
+            "free": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 60,
+                "height": 48
+              },
+              "alphaBBox": [
+                20,
+                20,
+                40,
+                29
+              ],
+              "alphaSize": {
+                "width": 20,
+                "height": 9
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 19
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 39,
+                  "y": 24
+                },
+                "pixel": {
+                  "x": 40,
+                  "y": 24.5
+                },
+                "normalized": {
+                  "x": 0.666667,
+                  "y": 0.510417
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.666667,
+                "y": 0.510417
+              },
+              "rotation": 0,
+              "bodyAngle": 0,
+              "bodyLength": 11,
+              "finPixels": [
+                [
+                  28,
+                  28
+                ],
+                [
+                  29,
+                  28
+                ],
+                [
+                  32,
+                  28
+                ],
+                [
+                  33,
+                  28
+                ]
+              ],
+              "anatomyCue": "large mouth, broad body, dorsal structure, pectoral plus pelvic/anal fins"
+            }
+          }
+        },
+        "large": {
+          "selectionWeight": 0.5,
+          "states": {
+            "base": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 51,
+                "height": 62
+              },
+              "alphaBBox": [
+                20,
+                20,
+                33,
+                42
+              ],
+              "alphaSize": {
+                "width": 13,
+                "height": 22
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 18,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 26,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 26.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.519608,
+                  "y": 0.322581
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.519608,
+                "y": 0.322581
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 16,
+              "finPixels": [
+                [
+                  31,
+                  29
+                ],
+                [
+                  31,
+                  30
+                ],
+                [
+                  32,
+                  30
+                ],
+                [
+                  31,
+                  31
+                ],
+                [
+                  30,
+                  33
+                ],
+                [
+                  30,
+                  34
+                ],
+                [
+                  31,
+                  34
+                ],
+                [
+                  30,
+                  35
+                ]
+              ],
+              "anatomyCue": "large mouth, broad body, dorsal structure, pectoral plus pelvic/anal fins"
+            },
+            "fight": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 62,
+                "height": 51
+              },
+              "alphaBBox": [
+                20,
+                20,
+                42,
+                33
+              ],
+              "alphaSize": {
+                "width": 22,
+                "height": 13
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 18
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 41,
+                  "y": 26
+                },
+                "pixel": {
+                  "x": 42,
+                  "y": 26.5
+                },
+                "normalized": {
+                  "x": 0.677419,
+                  "y": 0.519608
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.677419,
+                "y": 0.519608
+              },
+              "rotation": -1.5707963267948966,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 12,
+              "finPixels": [
+                [
+                  29,
+                  31
+                ],
+                [
+                  30,
+                  31
+                ],
+                [
+                  30,
+                  32
+                ],
+                [
+                  31,
+                  31
+                ],
+                [
+                  33,
+                  31
+                ],
+                [
+                  34,
+                  31
+                ],
+                [
+                  34,
+                  32
+                ],
+                [
+                  35,
+                  31
+                ]
+              ],
+              "anatomyCue": "large mouth, broad body, dorsal structure, pectoral plus pelvic/anal fins"
+            },
+            "hang": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 51,
+                "height": 62
+              },
+              "alphaBBox": [
+                20,
+                20,
+                33,
+                42
+              ],
+              "alphaSize": {
+                "width": 13,
+                "height": 22
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 18,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 26,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 26.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.519608,
+                  "y": 0.322581
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.519608,
+                "y": 0.322581
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 16,
+              "finPixels": [
+                [
+                  31,
+                  29
+                ],
+                [
+                  31,
+                  30
+                ],
+                [
+                  32,
+                  30
+                ],
+                [
+                  31,
+                  31
+                ],
+                [
+                  30,
+                  33
+                ],
+                [
+                  30,
+                  34
+                ],
+                [
+                  31,
+                  34
+                ],
+                [
+                  30,
+                  35
+                ]
+              ],
+              "anatomyCue": "large mouth, broad body, dorsal structure, pectoral plus pelvic/anal fins"
+            },
+            "held": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 51,
+                "height": 62
+              },
+              "alphaBBox": [
+                20,
+                20,
+                33,
+                42
+              ],
+              "alphaSize": {
+                "width": 13,
+                "height": 22
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 18,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 26,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 26.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.519608,
+                  "y": 0.322581
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.519608,
+                "y": 0.322581
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 16,
+              "finPixels": [
+                [
+                  31,
+                  29
+                ],
+                [
+                  31,
+                  30
+                ],
+                [
+                  32,
+                  30
+                ],
+                [
+                  31,
+                  31
+                ],
+                [
+                  30,
+                  33
+                ],
+                [
+                  30,
+                  34
+                ],
+                [
+                  31,
+                  34
+                ],
+                [
+                  30,
+                  35
+                ]
+              ],
+              "anatomyCue": "large mouth, broad body, dorsal structure, pectoral plus pelvic/anal fins"
+            },
+            "free": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 66,
+                "height": 51
+              },
+              "alphaBBox": [
+                20,
+                20,
+                46,
+                33
+              ],
+              "alphaSize": {
+                "width": 26,
+                "height": 13
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 18
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 45,
+                  "y": 26
+                },
+                "pixel": {
+                  "x": 46,
+                  "y": 26.5
+                },
+                "normalized": {
+                  "x": 0.69697,
+                  "y": 0.519608
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.69697,
+                "y": 0.519608
+              },
+              "rotation": 0,
+              "bodyAngle": 0,
+              "bodyLength": 14,
+              "finPixels": [
+                [
+                  31,
+                  31
+                ],
+                [
+                  32,
+                  31
+                ],
+                [
+                  32,
+                  32
+                ],
+                [
+                  33,
+                  31
+                ],
+                [
+                  36,
+                  31
+                ],
+                [
+                  37,
+                  31
+                ],
+                [
+                  37,
+                  32
+                ],
+                [
+                  38,
+                  31
+                ]
+              ],
+              "anatomyCue": "large mouth, broad body, dorsal structure, pectoral plus pelvic/anal fins"
+            }
+          }
+        }
+      }
+    },
+    "walleye": {
+      "anatomyCue": "long body, two dorsal groups, pale tail cue, pelvic/anal fins",
+      "sizes": {
+        "regular": {
+          "selectionWeight": 0.5,
+          "states": {
+            "base": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 47,
+                "height": 59
+              },
+              "alphaBBox": [
+                20,
+                20,
+                28,
+                39
+              ],
+              "alphaSize": {
+                "width": 8,
+                "height": 19
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 19,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 24,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 24.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.521277,
+                  "y": 0.338983
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.521277,
+                "y": 0.338983
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 14,
+              "finPixels": [
+                [
+                  27,
+                  28
+                ],
+                [
+                  27,
+                  29
+                ],
+                [
+                  27,
+                  32
+                ],
+                [
+                  27,
+                  33
+                ]
+              ],
+              "anatomyCue": "long body, two dorsal groups, pale tail cue, pelvic/anal fins"
+            },
+            "fight": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 59,
+                "height": 47
+              },
+              "alphaBBox": [
+                20,
+                20,
+                39,
+                28
+              ],
+              "alphaSize": {
+                "width": 19,
+                "height": 8
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 19
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 38,
+                  "y": 24
+                },
+                "pixel": {
+                  "x": 39,
+                  "y": 24.5
+                },
+                "normalized": {
+                  "x": 0.661017,
+                  "y": 0.521277
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.661017,
+                "y": 0.521277
+              },
+              "rotation": -1.5707963267948966,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 10,
+              "finPixels": [
+                [
+                  28,
+                  27
+                ],
+                [
+                  29,
+                  27
+                ],
+                [
+                  32,
+                  27
+                ],
+                [
+                  33,
+                  27
+                ]
+              ],
+              "anatomyCue": "long body, two dorsal groups, pale tail cue, pelvic/anal fins"
+            },
+            "hang": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 47,
+                "height": 59
+              },
+              "alphaBBox": [
+                20,
+                20,
+                28,
+                39
+              ],
+              "alphaSize": {
+                "width": 8,
+                "height": 19
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 19,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 24,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 24.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.521277,
+                  "y": 0.338983
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.521277,
+                "y": 0.338983
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 14,
+              "finPixels": [
+                [
+                  27,
+                  28
+                ],
+                [
+                  27,
+                  29
+                ],
+                [
+                  27,
+                  32
+                ],
+                [
+                  27,
+                  33
+                ]
+              ],
+              "anatomyCue": "long body, two dorsal groups, pale tail cue, pelvic/anal fins"
+            },
+            "held": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 47,
+                "height": 59
+              },
+              "alphaBBox": [
+                20,
+                20,
+                28,
+                39
+              ],
+              "alphaSize": {
+                "width": 8,
+                "height": 19
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 19,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 24,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 24.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.521277,
+                  "y": 0.338983
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.521277,
+                "y": 0.338983
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 14,
+              "finPixels": [
+                [
+                  27,
+                  28
+                ],
+                [
+                  27,
+                  29
+                ],
+                [
+                  27,
+                  32
+                ],
+                [
+                  27,
+                  33
+                ]
+              ],
+              "anatomyCue": "long body, two dorsal groups, pale tail cue, pelvic/anal fins"
+            },
+            "free": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 60,
+                "height": 46
+              },
+              "alphaBBox": [
+                20,
+                20,
+                40,
+                27
+              ],
+              "alphaSize": {
+                "width": 20,
+                "height": 7
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 19
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 39,
+                  "y": 23
+                },
+                "pixel": {
+                  "x": 40,
+                  "y": 23.5
+                },
+                "normalized": {
+                  "x": 0.666667,
+                  "y": 0.51087
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.666667,
+                "y": 0.51087
+              },
+              "rotation": 0,
+              "bodyAngle": 0,
+              "bodyLength": 11,
+              "finPixels": [
+                [
+                  28,
+                  26
+                ],
+                [
+                  29,
+                  26
+                ],
+                [
+                  33,
+                  26
+                ],
+                [
+                  34,
+                  26
+                ]
+              ],
+              "anatomyCue": "long body, two dorsal groups, pale tail cue, pelvic/anal fins"
+            }
+          }
+        },
+        "large": {
+          "selectionWeight": 0.5,
+          "states": {
+            "base": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 50,
+                "height": 67
+              },
+              "alphaBBox": [
+                20,
+                20,
+                32,
+                47
+              ],
+              "alphaSize": {
+                "width": 12,
+                "height": 27
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 18,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 26,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 26.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.53,
+                  "y": 0.298507
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.53,
+                "y": 0.298507
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 19,
+              "finPixels": [
+                [
+                  30,
+                  31
+                ],
+                [
+                  30,
+                  32
+                ],
+                [
+                  31,
+                  32
+                ],
+                [
+                  30,
+                  33
+                ],
+                [
+                  30,
+                  38
+                ],
+                [
+                  30,
+                  39
+                ],
+                [
+                  31,
+                  39
+                ],
+                [
+                  30,
+                  40
+                ]
+              ],
+              "anatomyCue": "long body, two dorsal groups, pale tail cue, pelvic/anal fins"
+            },
+            "fight": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 67,
+                "height": 50
+              },
+              "alphaBBox": [
+                20,
+                20,
+                47,
+                32
+              ],
+              "alphaSize": {
+                "width": 27,
+                "height": 12
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 18
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 46,
+                  "y": 26
+                },
+                "pixel": {
+                  "x": 47,
+                  "y": 26.5
+                },
+                "normalized": {
+                  "x": 0.701493,
+                  "y": 0.53
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.701493,
+                "y": 0.53
+              },
+              "rotation": -1.5707963267948966,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 15,
+              "finPixels": [
+                [
+                  31,
+                  30
+                ],
+                [
+                  32,
+                  30
+                ],
+                [
+                  32,
+                  31
+                ],
+                [
+                  33,
+                  30
+                ],
+                [
+                  38,
+                  30
+                ],
+                [
+                  39,
+                  30
+                ],
+                [
+                  39,
+                  31
+                ],
+                [
+                  40,
+                  30
+                ]
+              ],
+              "anatomyCue": "long body, two dorsal groups, pale tail cue, pelvic/anal fins"
+            },
+            "hang": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 50,
+                "height": 67
+              },
+              "alphaBBox": [
+                20,
+                20,
+                32,
+                47
+              ],
+              "alphaSize": {
+                "width": 12,
+                "height": 27
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 18,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 26,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 26.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.53,
+                  "y": 0.298507
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.53,
+                "y": 0.298507
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 19,
+              "finPixels": [
+                [
+                  30,
+                  31
+                ],
+                [
+                  30,
+                  32
+                ],
+                [
+                  31,
+                  32
+                ],
+                [
+                  30,
+                  33
+                ],
+                [
+                  30,
+                  38
+                ],
+                [
+                  30,
+                  39
+                ],
+                [
+                  31,
+                  39
+                ],
+                [
+                  30,
+                  40
+                ]
+              ],
+              "anatomyCue": "long body, two dorsal groups, pale tail cue, pelvic/anal fins"
+            },
+            "held": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 50,
+                "height": 67
+              },
+              "alphaBBox": [
+                20,
+                20,
+                32,
+                47
+              ],
+              "alphaSize": {
+                "width": 12,
+                "height": 27
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 18,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 26,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 26.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.53,
+                  "y": 0.298507
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.53,
+                "y": 0.298507
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 19,
+              "finPixels": [
+                [
+                  30,
+                  31
+                ],
+                [
+                  30,
+                  32
+                ],
+                [
+                  31,
+                  32
+                ],
+                [
+                  30,
+                  33
+                ],
+                [
+                  30,
+                  38
+                ],
+                [
+                  30,
+                  39
+                ],
+                [
+                  31,
+                  39
+                ],
+                [
+                  30,
+                  40
+                ]
+              ],
+              "anatomyCue": "long body, two dorsal groups, pale tail cue, pelvic/anal fins"
+            },
+            "free": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 69,
+                "height": 48
+              },
+              "alphaBBox": [
+                20,
+                20,
+                49,
+                30
+              ],
+              "alphaSize": {
+                "width": 29,
+                "height": 10
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 18
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 48,
+                  "y": 24
+                },
+                "pixel": {
+                  "x": 49,
+                  "y": 24.5
+                },
+                "normalized": {
+                  "x": 0.710145,
+                  "y": 0.510417
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.710145,
+                "y": 0.510417
+              },
+              "rotation": 0,
+              "bodyAngle": 0,
+              "bodyLength": 16,
+              "finPixels": [
+                [
+                  32,
+                  28
+                ],
+                [
+                  33,
+                  28
+                ],
+                [
+                  33,
+                  29
+                ],
+                [
+                  34,
+                  28
+                ],
+                [
+                  39,
+                  28
+                ],
+                [
+                  40,
+                  28
+                ],
+                [
+                  40,
+                  29
+                ],
+                [
+                  41,
+                  28
+                ]
+              ],
+              "anatomyCue": "long body, two dorsal groups, pale tail cue, pelvic/anal fins"
+            }
+          }
+        }
+      }
+    },
+    "perch": {
+      "anatomyCue": "bars, orange lower fins, compact body, two dorsal groups",
+      "sizes": {
+        "regular": {
+          "selectionWeight": 0.5,
+          "states": {
+            "base": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 46,
+                "height": 53
+              },
+              "alphaBBox": [
+                20,
+                20,
+                27,
+                33
+              ],
+              "alphaSize": {
+                "width": 7,
+                "height": 13
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 19,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 23,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 23.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.51087,
+                  "y": 0.377358
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.51087,
+                "y": 0.377358
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 9,
+              "finPixels": [
+                [
+                  26,
+                  25
+                ],
+                [
+                  26,
+                  26
+                ],
+                [
+                  26,
+                  28
+                ],
+                [
+                  26,
+                  29
+                ]
+              ],
+              "anatomyCue": "bars, orange lower fins, compact body, two dorsal groups"
+            },
+            "fight": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 53,
+                "height": 46
+              },
+              "alphaBBox": [
+                20,
+                20,
+                33,
+                27
+              ],
+              "alphaSize": {
+                "width": 13,
+                "height": 7
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 19
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 32,
+                  "y": 23
+                },
+                "pixel": {
+                  "x": 33,
+                  "y": 23.5
+                },
+                "normalized": {
+                  "x": 0.622642,
+                  "y": 0.51087
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.622642,
+                "y": 0.51087
+              },
+              "rotation": -1.5707963267948966,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 7,
+              "finPixels": [
+                [
+                  25,
+                  26
+                ],
+                [
+                  26,
+                  26
+                ],
+                [
+                  28,
+                  26
+                ],
+                [
+                  29,
+                  26
+                ]
+              ],
+              "anatomyCue": "bars, orange lower fins, compact body, two dorsal groups"
+            },
+            "hang": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 46,
+                "height": 53
+              },
+              "alphaBBox": [
+                20,
+                20,
+                27,
+                33
+              ],
+              "alphaSize": {
+                "width": 7,
+                "height": 13
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 19,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 23,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 23.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.51087,
+                  "y": 0.377358
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.51087,
+                "y": 0.377358
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 9,
+              "finPixels": [
+                [
+                  26,
+                  25
+                ],
+                [
+                  26,
+                  26
+                ],
+                [
+                  26,
+                  28
+                ],
+                [
+                  26,
+                  29
+                ]
+              ],
+              "anatomyCue": "bars, orange lower fins, compact body, two dorsal groups"
+            },
+            "held": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 46,
+                "height": 53
+              },
+              "alphaBBox": [
+                20,
+                20,
+                27,
+                33
+              ],
+              "alphaSize": {
+                "width": 7,
+                "height": 13
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 19,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 23,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 23.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.51087,
+                  "y": 0.377358
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.51087,
+                "y": 0.377358
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 9,
+              "finPixels": [
+                [
+                  26,
+                  25
+                ],
+                [
+                  26,
+                  26
+                ],
+                [
+                  26,
+                  28
+                ],
+                [
+                  26,
+                  29
+                ]
+              ],
+              "anatomyCue": "bars, orange lower fins, compact body, two dorsal groups"
+            },
+            "free": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 54,
+                "height": 45
+              },
+              "alphaBBox": [
+                20,
+                20,
+                34,
+                26
+              ],
+              "alphaSize": {
+                "width": 14,
+                "height": 6
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 19
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 33,
+                  "y": 23
+                },
+                "pixel": {
+                  "x": 34,
+                  "y": 23.5
+                },
+                "normalized": {
+                  "x": 0.62963,
+                  "y": 0.522222
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.62963,
+                "y": 0.522222
+              },
+              "rotation": 0,
+              "bodyAngle": 0,
+              "bodyLength": 8,
+              "finPixels": [
+                [
+                  26,
+                  25
+                ],
+                [
+                  27,
+                  25
+                ],
+                [
+                  29,
+                  25
+                ],
+                [
+                  30,
+                  25
+                ]
+              ],
+              "anatomyCue": "bars, orange lower fins, compact body, two dorsal groups"
+            }
+          }
+        },
+        "large": {
+          "selectionWeight": 0.5,
+          "states": {
+            "base": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 49,
+                "height": 60
+              },
+              "alphaBBox": [
+                20,
+                20,
+                31,
+                40
+              ],
+              "alphaSize": {
+                "width": 11,
+                "height": 20
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 18,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 25,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 25.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.520408,
+                  "y": 0.333333
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.520408,
+                "y": 0.333333
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 14,
+              "finPixels": [
+                [
+                  29,
+                  28
+                ],
+                [
+                  29,
+                  29
+                ],
+                [
+                  30,
+                  29
+                ],
+                [
+                  29,
+                  30
+                ],
+                [
+                  29,
+                  33
+                ],
+                [
+                  29,
+                  34
+                ],
+                [
+                  30,
+                  34
+                ],
+                [
+                  29,
+                  35
+                ]
+              ],
+              "anatomyCue": "bars, orange lower fins, compact body, two dorsal groups"
+            },
+            "fight": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 60,
+                "height": 49
+              },
+              "alphaBBox": [
+                20,
+                20,
+                40,
+                31
+              ],
+              "alphaSize": {
+                "width": 20,
+                "height": 11
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 18
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 39,
+                  "y": 25
+                },
+                "pixel": {
+                  "x": 40,
+                  "y": 25.5
+                },
+                "normalized": {
+                  "x": 0.666667,
+                  "y": 0.520408
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.666667,
+                "y": 0.520408
+              },
+              "rotation": -1.5707963267948966,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 11,
+              "finPixels": [
+                [
+                  28,
+                  29
+                ],
+                [
+                  29,
+                  29
+                ],
+                [
+                  29,
+                  30
+                ],
+                [
+                  30,
+                  29
+                ],
+                [
+                  33,
+                  29
+                ],
+                [
+                  34,
+                  29
+                ],
+                [
+                  34,
+                  30
+                ],
+                [
+                  35,
+                  29
+                ]
+              ],
+              "anatomyCue": "bars, orange lower fins, compact body, two dorsal groups"
+            },
+            "hang": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 49,
+                "height": 60
+              },
+              "alphaBBox": [
+                20,
+                20,
+                31,
+                40
+              ],
+              "alphaSize": {
+                "width": 11,
+                "height": 20
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 18,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 25,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 25.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.520408,
+                  "y": 0.333333
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.520408,
+                "y": 0.333333
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 14,
+              "finPixels": [
+                [
+                  29,
+                  28
+                ],
+                [
+                  29,
+                  29
+                ],
+                [
+                  30,
+                  29
+                ],
+                [
+                  29,
+                  30
+                ],
+                [
+                  29,
+                  33
+                ],
+                [
+                  29,
+                  34
+                ],
+                [
+                  30,
+                  34
+                ],
+                [
+                  29,
+                  35
+                ]
+              ],
+              "anatomyCue": "bars, orange lower fins, compact body, two dorsal groups"
+            },
+            "held": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 49,
+                "height": 60
+              },
+              "alphaBBox": [
+                20,
+                20,
+                31,
+                40
+              ],
+              "alphaSize": {
+                "width": 11,
+                "height": 20
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 18,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 25,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 25.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.520408,
+                  "y": 0.333333
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.520408,
+                "y": 0.333333
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 14,
+              "finPixels": [
+                [
+                  29,
+                  28
+                ],
+                [
+                  29,
+                  29
+                ],
+                [
+                  30,
+                  29
+                ],
+                [
+                  29,
+                  30
+                ],
+                [
+                  29,
+                  33
+                ],
+                [
+                  29,
+                  34
+                ],
+                [
+                  30,
+                  34
+                ],
+                [
+                  29,
+                  35
+                ]
+              ],
+              "anatomyCue": "bars, orange lower fins, compact body, two dorsal groups"
+            },
+            "free": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 62,
+                "height": 47
+              },
+              "alphaBBox": [
+                20,
+                20,
+                42,
+                29
+              ],
+              "alphaSize": {
+                "width": 22,
+                "height": 9
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 18
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 41,
+                  "y": 24
+                },
+                "pixel": {
+                  "x": 42,
+                  "y": 24.5
+                },
+                "normalized": {
+                  "x": 0.677419,
+                  "y": 0.521277
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.677419,
+                "y": 0.521277
+              },
+              "rotation": 0,
+              "bodyAngle": 0,
+              "bodyLength": 12,
+              "finPixels": [
+                [
+                  29,
+                  27
+                ],
+                [
+                  30,
+                  27
+                ],
+                [
+                  30,
+                  28
+                ],
+                [
+                  31,
+                  27
+                ],
+                [
+                  34,
+                  27
+                ],
+                [
+                  35,
+                  27
+                ],
+                [
+                  35,
+                  28
+                ],
+                [
+                  36,
+                  27
+                ]
+              ],
+              "anatomyCue": "bars, orange lower fins, compact body, two dorsal groups"
+            }
+          }
+        }
+      }
+    },
+    "trout": {
+      "anatomyCue": "spots, forked tail, dorsal/adipose cues, lower fins",
+      "sizes": {
+        "regular": {
+          "selectionWeight": 0.5,
+          "states": {
+            "base": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 46,
+                "height": 57
+              },
+              "alphaBBox": [
+                20,
+                20,
+                27,
+                37
+              ],
+              "alphaSize": {
+                "width": 7,
+                "height": 17
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 19,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 23,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 23.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.51087,
+                  "y": 0.350877
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.51087,
+                "y": 0.350877
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 12,
+              "finPixels": [
+                [
+                  26,
+                  26
+                ],
+                [
+                  26,
+                  27
+                ],
+                [
+                  26,
+                  31
+                ],
+                [
+                  26,
+                  32
+                ]
+              ],
+              "anatomyCue": "spots, forked tail, dorsal/adipose cues, lower fins"
+            },
+            "fight": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 57,
+                "height": 46
+              },
+              "alphaBBox": [
+                20,
+                20,
+                37,
+                27
+              ],
+              "alphaSize": {
+                "width": 17,
+                "height": 7
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 19
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 36,
+                  "y": 23
+                },
+                "pixel": {
+                  "x": 37,
+                  "y": 23.5
+                },
+                "normalized": {
+                  "x": 0.649123,
+                  "y": 0.51087
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.649123,
+                "y": 0.51087
+              },
+              "rotation": -1.5707963267948966,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 9,
+              "finPixels": [
+                [
+                  26,
+                  26
+                ],
+                [
+                  27,
+                  26
+                ],
+                [
+                  31,
+                  26
+                ],
+                [
+                  32,
+                  26
+                ]
+              ],
+              "anatomyCue": "spots, forked tail, dorsal/adipose cues, lower fins"
+            },
+            "hang": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 46,
+                "height": 57
+              },
+              "alphaBBox": [
+                20,
+                20,
+                27,
+                37
+              ],
+              "alphaSize": {
+                "width": 7,
+                "height": 17
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 19,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 23,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 23.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.51087,
+                  "y": 0.350877
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.51087,
+                "y": 0.350877
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 12,
+              "finPixels": [
+                [
+                  26,
+                  26
+                ],
+                [
+                  26,
+                  27
+                ],
+                [
+                  26,
+                  31
+                ],
+                [
+                  26,
+                  32
+                ]
+              ],
+              "anatomyCue": "spots, forked tail, dorsal/adipose cues, lower fins"
+            },
+            "held": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 46,
+                "height": 57
+              },
+              "alphaBBox": [
+                20,
+                20,
+                27,
+                37
+              ],
+              "alphaSize": {
+                "width": 7,
+                "height": 17
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 19,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 23,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 23.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.51087,
+                  "y": 0.350877
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.51087,
+                "y": 0.350877
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 12,
+              "finPixels": [
+                [
+                  26,
+                  26
+                ],
+                [
+                  26,
+                  27
+                ],
+                [
+                  26,
+                  31
+                ],
+                [
+                  26,
+                  32
+                ]
+              ],
+              "anatomyCue": "spots, forked tail, dorsal/adipose cues, lower fins"
+            },
+            "free": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 57,
+                "height": 45
+              },
+              "alphaBBox": [
+                20,
+                20,
+                37,
+                26
+              ],
+              "alphaSize": {
+                "width": 17,
+                "height": 6
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 19
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 36,
+                  "y": 23
+                },
+                "pixel": {
+                  "x": 37,
+                  "y": 23.5
+                },
+                "normalized": {
+                  "x": 0.649123,
+                  "y": 0.522222
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.649123,
+                "y": 0.522222
+              },
+              "rotation": 0,
+              "bodyAngle": 0,
+              "bodyLength": 9,
+              "finPixels": [
+                [
+                  26,
+                  25
+                ],
+                [
+                  27,
+                  25
+                ],
+                [
+                  31,
+                  25
+                ],
+                [
+                  32,
+                  25
+                ]
+              ],
+              "anatomyCue": "spots, forked tail, dorsal/adipose cues, lower fins"
+            }
+          }
+        },
+        "large": {
+          "selectionWeight": 0.5,
+          "states": {
+            "base": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 49,
+                "height": 65
+              },
+              "alphaBBox": [
+                20,
+                20,
+                31,
+                45
+              ],
+              "alphaSize": {
+                "width": 11,
+                "height": 25
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 18,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 25,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 25.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.520408,
+                  "y": 0.307692
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.520408,
+                "y": 0.307692
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 18,
+              "finPixels": [
+                [
+                  29,
+                  30
+                ],
+                [
+                  29,
+                  31
+                ],
+                [
+                  30,
+                  31
+                ],
+                [
+                  29,
+                  32
+                ],
+                [
+                  29,
+                  36
+                ],
+                [
+                  29,
+                  37
+                ],
+                [
+                  30,
+                  37
+                ],
+                [
+                  29,
+                  38
+                ]
+              ],
+              "anatomyCue": "spots, forked tail, dorsal/adipose cues, lower fins"
+            },
+            "fight": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 65,
+                "height": 49
+              },
+              "alphaBBox": [
+                20,
+                20,
+                45,
+                31
+              ],
+              "alphaSize": {
+                "width": 25,
+                "height": 11
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 18
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 44,
+                  "y": 25
+                },
+                "pixel": {
+                  "x": 45,
+                  "y": 25.5
+                },
+                "normalized": {
+                  "x": 0.692308,
+                  "y": 0.520408
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.692308,
+                "y": 0.520408
+              },
+              "rotation": -1.5707963267948966,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 14,
+              "finPixels": [
+                [
+                  30,
+                  29
+                ],
+                [
+                  31,
+                  29
+                ],
+                [
+                  31,
+                  30
+                ],
+                [
+                  32,
+                  29
+                ],
+                [
+                  36,
+                  29
+                ],
+                [
+                  37,
+                  29
+                ],
+                [
+                  37,
+                  30
+                ],
+                [
+                  38,
+                  29
+                ]
+              ],
+              "anatomyCue": "spots, forked tail, dorsal/adipose cues, lower fins"
+            },
+            "hang": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 49,
+                "height": 65
+              },
+              "alphaBBox": [
+                20,
+                20,
+                31,
+                45
+              ],
+              "alphaSize": {
+                "width": 11,
+                "height": 25
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 18,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 25,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 25.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.520408,
+                  "y": 0.307692
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.520408,
+                "y": 0.307692
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 18,
+              "finPixels": [
+                [
+                  29,
+                  30
+                ],
+                [
+                  29,
+                  31
+                ],
+                [
+                  30,
+                  31
+                ],
+                [
+                  29,
+                  32
+                ],
+                [
+                  29,
+                  36
+                ],
+                [
+                  29,
+                  37
+                ],
+                [
+                  30,
+                  37
+                ],
+                [
+                  29,
+                  38
+                ]
+              ],
+              "anatomyCue": "spots, forked tail, dorsal/adipose cues, lower fins"
+            },
+            "held": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 49,
+                "height": 65
+              },
+              "alphaBBox": [
+                20,
+                20,
+                31,
+                45
+              ],
+              "alphaSize": {
+                "width": 11,
+                "height": 25
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 18,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 25,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 25.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.520408,
+                  "y": 0.307692
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.520408,
+                "y": 0.307692
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 18,
+              "finPixels": [
+                [
+                  29,
+                  30
+                ],
+                [
+                  29,
+                  31
+                ],
+                [
+                  30,
+                  31
+                ],
+                [
+                  29,
+                  32
+                ],
+                [
+                  29,
+                  36
+                ],
+                [
+                  29,
+                  37
+                ],
+                [
+                  30,
+                  37
+                ],
+                [
+                  29,
+                  38
+                ]
+              ],
+              "anatomyCue": "spots, forked tail, dorsal/adipose cues, lower fins"
+            },
+            "free": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 65,
+                "height": 47
+              },
+              "alphaBBox": [
+                20,
+                20,
+                45,
+                29
+              ],
+              "alphaSize": {
+                "width": 25,
+                "height": 9
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 18
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 44,
+                  "y": 24
+                },
+                "pixel": {
+                  "x": 45,
+                  "y": 24.5
+                },
+                "normalized": {
+                  "x": 0.692308,
+                  "y": 0.521277
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.692308,
+                "y": 0.521277
+              },
+              "rotation": 0,
+              "bodyAngle": 0,
+              "bodyLength": 14,
+              "finPixels": [
+                [
+                  30,
+                  27
+                ],
+                [
+                  31,
+                  27
+                ],
+                [
+                  31,
+                  28
+                ],
+                [
+                  32,
+                  27
+                ],
+                [
+                  36,
+                  27
+                ],
+                [
+                  37,
+                  27
+                ],
+                [
+                  37,
+                  28
+                ],
+                [
+                  38,
+                  27
+                ]
+              ],
+              "anatomyCue": "spots, forked tail, dorsal/adipose cues, lower fins"
+            }
+          }
+        }
+      }
+    },
+    "bluegill": {
+      "anatomyCue": "deep panfish body, opercular spot, dorsal/anal and paired fins",
+      "sizes": {
+        "regular": {
+          "selectionWeight": 0.5,
+          "states": {
+            "base": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 45,
+                "height": 50
+              },
+              "alphaBBox": [
+                20,
+                20,
+                26,
+                30
+              ],
+              "alphaSize": {
+                "width": 6,
+                "height": 10
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 19,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 22,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 22.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.5,
+                  "y": 0.4
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.4
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 7,
+              "finPixels": [
+                [
+                  25,
+                  24
+                ],
+                [
+                  25,
+                  25
+                ],
+                [
+                  25,
+                  26
+                ],
+                [
+                  25,
+                  27
+                ]
+              ],
+              "anatomyCue": "deep panfish body, opercular spot, dorsal/anal and paired fins"
+            },
+            "fight": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 50,
+                "height": 45
+              },
+              "alphaBBox": [
+                20,
+                20,
+                30,
+                26
+              ],
+              "alphaSize": {
+                "width": 10,
+                "height": 6
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 19
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 29,
+                  "y": 22
+                },
+                "pixel": {
+                  "x": 30,
+                  "y": 22.5
+                },
+                "normalized": {
+                  "x": 0.6,
+                  "y": 0.5
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.6,
+                "y": 0.5
+              },
+              "rotation": -1.5707963267948966,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 6,
+              "finPixels": [
+                [
+                  24,
+                  25
+                ],
+                [
+                  25,
+                  25
+                ],
+                [
+                  26,
+                  25
+                ],
+                [
+                  27,
+                  25
+                ]
+              ],
+              "anatomyCue": "deep panfish body, opercular spot, dorsal/anal and paired fins"
+            },
+            "hang": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 45,
+                "height": 50
+              },
+              "alphaBBox": [
+                20,
+                20,
+                26,
+                30
+              ],
+              "alphaSize": {
+                "width": 6,
+                "height": 10
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 19,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 22,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 22.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.5,
+                  "y": 0.4
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.4
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 7,
+              "finPixels": [
+                [
+                  25,
+                  24
+                ],
+                [
+                  25,
+                  25
+                ],
+                [
+                  25,
+                  26
+                ],
+                [
+                  25,
+                  27
+                ]
+              ],
+              "anatomyCue": "deep panfish body, opercular spot, dorsal/anal and paired fins"
+            },
+            "held": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 45,
+                "height": 50
+              },
+              "alphaBBox": [
+                20,
+                20,
+                26,
+                30
+              ],
+              "alphaSize": {
+                "width": 6,
+                "height": 10
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 19,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 22,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 22.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.5,
+                  "y": 0.4
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.4
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 7,
+              "finPixels": [
+                [
+                  25,
+                  24
+                ],
+                [
+                  25,
+                  25
+                ],
+                [
+                  25,
+                  26
+                ],
+                [
+                  25,
+                  27
+                ]
+              ],
+              "anatomyCue": "deep panfish body, opercular spot, dorsal/anal and paired fins"
+            },
+            "free": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 50,
+                "height": 45
+              },
+              "alphaBBox": [
+                20,
+                20,
+                30,
+                26
+              ],
+              "alphaSize": {
+                "width": 10,
+                "height": 6
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 19
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 29,
+                  "y": 22
+                },
+                "pixel": {
+                  "x": 30,
+                  "y": 22.5
+                },
+                "normalized": {
+                  "x": 0.6,
+                  "y": 0.5
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.6,
+                "y": 0.5
+              },
+              "rotation": 0,
+              "bodyAngle": 0,
+              "bodyLength": 6,
+              "finPixels": [
+                [
+                  24,
+                  25
+                ],
+                [
+                  25,
+                  25
+                ],
+                [
+                  26,
+                  25
+                ],
+                [
+                  27,
+                  25
+                ]
+              ],
+              "anatomyCue": "deep panfish body, opercular spot, dorsal/anal and paired fins"
+            }
+          }
+        },
+        "large": {
+          "selectionWeight": 0.5,
+          "states": {
+            "base": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 49,
+                "height": 57
+              },
+              "alphaBBox": [
+                20,
+                20,
+                31,
+                37
+              ],
+              "alphaSize": {
+                "width": 11,
+                "height": 17
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 18,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 25,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 25.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.520408,
+                  "y": 0.350877
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.520408,
+                "y": 0.350877
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 12,
+              "finPixels": [
+                [
+                  29,
+                  28
+                ],
+                [
+                  29,
+                  29
+                ],
+                [
+                  30,
+                  29
+                ],
+                [
+                  29,
+                  30
+                ],
+                [
+                  29,
+                  31
+                ],
+                [
+                  29,
+                  32
+                ],
+                [
+                  30,
+                  32
+                ],
+                [
+                  29,
+                  33
+                ]
+              ],
+              "anatomyCue": "deep panfish body, opercular spot, dorsal/anal and paired fins"
+            },
+            "fight": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 57,
+                "height": 49
+              },
+              "alphaBBox": [
+                20,
+                20,
+                37,
+                31
+              ],
+              "alphaSize": {
+                "width": 17,
+                "height": 11
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 18
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 36,
+                  "y": 25
+                },
+                "pixel": {
+                  "x": 37,
+                  "y": 25.5
+                },
+                "normalized": {
+                  "x": 0.649123,
+                  "y": 0.520408
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.649123,
+                "y": 0.520408
+              },
+              "rotation": -1.5707963267948966,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 9,
+              "finPixels": [
+                [
+                  28,
+                  29
+                ],
+                [
+                  29,
+                  29
+                ],
+                [
+                  29,
+                  30
+                ],
+                [
+                  30,
+                  29
+                ],
+                [
+                  31,
+                  29
+                ],
+                [
+                  32,
+                  29
+                ],
+                [
+                  32,
+                  30
+                ],
+                [
+                  33,
+                  29
+                ]
+              ],
+              "anatomyCue": "deep panfish body, opercular spot, dorsal/anal and paired fins"
+            },
+            "hang": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 49,
+                "height": 57
+              },
+              "alphaBBox": [
+                20,
+                20,
+                31,
+                37
+              ],
+              "alphaSize": {
+                "width": 11,
+                "height": 17
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 18,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 25,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 25.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.520408,
+                  "y": 0.350877
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.520408,
+                "y": 0.350877
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 12,
+              "finPixels": [
+                [
+                  29,
+                  28
+                ],
+                [
+                  29,
+                  29
+                ],
+                [
+                  30,
+                  29
+                ],
+                [
+                  29,
+                  30
+                ],
+                [
+                  29,
+                  31
+                ],
+                [
+                  29,
+                  32
+                ],
+                [
+                  30,
+                  32
+                ],
+                [
+                  29,
+                  33
+                ]
+              ],
+              "anatomyCue": "deep panfish body, opercular spot, dorsal/anal and paired fins"
+            },
+            "held": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 49,
+                "height": 57
+              },
+              "alphaBBox": [
+                20,
+                20,
+                31,
+                37
+              ],
+              "alphaSize": {
+                "width": 11,
+                "height": 17
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 18,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 25,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 25.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.520408,
+                  "y": 0.350877
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.520408,
+                "y": 0.350877
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 12,
+              "finPixels": [
+                [
+                  29,
+                  28
+                ],
+                [
+                  29,
+                  29
+                ],
+                [
+                  30,
+                  29
+                ],
+                [
+                  29,
+                  30
+                ],
+                [
+                  29,
+                  31
+                ],
+                [
+                  29,
+                  32
+                ],
+                [
+                  30,
+                  32
+                ],
+                [
+                  29,
+                  33
+                ]
+              ],
+              "anatomyCue": "deep panfish body, opercular spot, dorsal/anal and paired fins"
+            },
+            "free": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 58,
+                "height": 48
+              },
+              "alphaBBox": [
+                20,
+                20,
+                38,
+                30
+              ],
+              "alphaSize": {
+                "width": 18,
+                "height": 10
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 18
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 37,
+                  "y": 24
+                },
+                "pixel": {
+                  "x": 38,
+                  "y": 24.5
+                },
+                "normalized": {
+                  "x": 0.655172,
+                  "y": 0.510417
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.655172,
+                "y": 0.510417
+              },
+              "rotation": 0,
+              "bodyAngle": 0,
+              "bodyLength": 10,
+              "finPixels": [
+                [
+                  28,
+                  28
+                ],
+                [
+                  29,
+                  28
+                ],
+                [
+                  29,
+                  29
+                ],
+                [
+                  30,
+                  28
+                ],
+                [
+                  31,
+                  28
+                ],
+                [
+                  32,
+                  28
+                ],
+                [
+                  32,
+                  29
+                ],
+                [
+                  33,
+                  28
+                ]
+              ],
+              "anatomyCue": "deep panfish body, opercular spot, dorsal/anal and paired fins"
+            }
+          }
+        }
+      }
+    },
+    "musky": {
+      "anatomyCue": "long body, rear-set dorsal/anal fins, paired fins, forked tail",
+      "sizes": {
+        "regular": {
+          "selectionWeight": 0.5,
+          "states": {
+            "base": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 49,
+                "height": 64
+              },
+              "alphaBBox": [
+                20,
+                20,
+                29,
+                44
+              ],
+              "alphaSize": {
+                "width": 9,
+                "height": 24
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 24,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 24.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.5,
+                  "y": 0.3125
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.3125
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 17,
+              "finPixels": [
+                [
+                  27,
+                  32
+                ],
+                [
+                  27,
+                  33
+                ],
+                [
+                  28,
+                  37
+                ],
+                [
+                  28,
+                  38
+                ]
+              ],
+              "anatomyCue": "long body, rear-set dorsal/anal fins, paired fins, forked tail"
+            },
+            "fight": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 64,
+                "height": 49
+              },
+              "alphaBBox": [
+                20,
+                20,
+                44,
+                29
+              ],
+              "alphaSize": {
+                "width": 24,
+                "height": 9
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 43,
+                  "y": 24
+                },
+                "pixel": {
+                  "x": 44,
+                  "y": 24.5
+                },
+                "normalized": {
+                  "x": 0.6875,
+                  "y": 0.5
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.6875,
+                "y": 0.5
+              },
+              "rotation": -1.5707963267948966,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 13,
+              "finPixels": [
+                [
+                  32,
+                  27
+                ],
+                [
+                  33,
+                  27
+                ],
+                [
+                  37,
+                  27
+                ],
+                [
+                  38,
+                  27
+                ]
+              ],
+              "anatomyCue": "long body, rear-set dorsal/anal fins, paired fins, forked tail"
+            },
+            "hang": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 49,
+                "height": 64
+              },
+              "alphaBBox": [
+                20,
+                20,
+                29,
+                44
+              ],
+              "alphaSize": {
+                "width": 9,
+                "height": 24
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 24,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 24.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.5,
+                  "y": 0.3125
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.3125
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 17,
+              "finPixels": [
+                [
+                  27,
+                  32
+                ],
+                [
+                  27,
+                  33
+                ],
+                [
+                  28,
+                  37
+                ],
+                [
+                  28,
+                  38
+                ]
+              ],
+              "anatomyCue": "long body, rear-set dorsal/anal fins, paired fins, forked tail"
+            },
+            "held": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 49,
+                "height": 64
+              },
+              "alphaBBox": [
+                20,
+                20,
+                29,
+                44
+              ],
+              "alphaSize": {
+                "width": 9,
+                "height": 24
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 24,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 24.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.5,
+                  "y": 0.3125
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.3125
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 17,
+              "finPixels": [
+                [
+                  27,
+                  32
+                ],
+                [
+                  27,
+                  33
+                ],
+                [
+                  28,
+                  37
+                ],
+                [
+                  28,
+                  38
+                ]
+              ],
+              "anatomyCue": "long body, rear-set dorsal/anal fins, paired fins, forked tail"
+            },
+            "free": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 69,
+                "height": 47
+              },
+              "alphaBBox": [
+                20,
+                20,
+                49,
+                28
+              ],
+              "alphaSize": {
+                "width": 29,
+                "height": 8
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 19
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 48,
+                  "y": 23
+                },
+                "pixel": {
+                  "x": 49,
+                  "y": 23.5
+                },
+                "normalized": {
+                  "x": 0.710145,
+                  "y": 0.5
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.710145,
+                "y": 0.5
+              },
+              "rotation": 0,
+              "bodyAngle": 0,
+              "bodyLength": 16,
+              "finPixels": [
+                [
+                  34,
+                  27
+                ],
+                [
+                  35,
+                  27
+                ],
+                [
+                  41,
+                  27
+                ],
+                [
+                  42,
+                  27
+                ]
+              ],
+              "anatomyCue": "long body, rear-set dorsal/anal fins, paired fins, forked tail"
+            }
+          }
+        },
+        "large": {
+          "selectionWeight": 0.5,
+          "states": {
+            "base": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 52,
+                "height": 72
+              },
+              "alphaBBox": [
+                20,
+                20,
+                33,
+                52
+              ],
+              "alphaSize": {
+                "width": 13,
+                "height": 32
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 19,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 26,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 26.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.509615,
+                  "y": 0.277778
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.509615,
+                "y": 0.277778
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 23,
+              "finPixels": [
+                [
+                  30,
+                  36
+                ],
+                [
+                  31,
+                  37
+                ],
+                [
+                  30,
+                  38
+                ],
+                [
+                  31,
+                  43
+                ],
+                [
+                  31,
+                  44
+                ],
+                [
+                  32,
+                  44
+                ],
+                [
+                  31,
+                  45
+                ]
+              ],
+              "anatomyCue": "long body, rear-set dorsal/anal fins, paired fins, forked tail"
+            },
+            "fight": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 72,
+                "height": 52
+              },
+              "alphaBBox": [
+                20,
+                20,
+                52,
+                32
+              ],
+              "alphaSize": {
+                "width": 32,
+                "height": 12
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 51,
+                  "y": 25
+                },
+                "pixel": {
+                  "x": 52,
+                  "y": 25.5
+                },
+                "normalized": {
+                  "x": 0.722222,
+                  "y": 0.490385
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.722222,
+                "y": 0.490385
+              },
+              "rotation": -1.5707963267948966,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 18,
+              "finPixels": [
+                [
+                  36,
+                  29
+                ],
+                [
+                  37,
+                  29
+                ],
+                [
+                  37,
+                  30
+                ],
+                [
+                  43,
+                  29
+                ],
+                [
+                  44,
+                  29
+                ],
+                [
+                  44,
+                  30
+                ],
+                [
+                  45,
+                  29
+                ]
+              ],
+              "anatomyCue": "long body, rear-set dorsal/anal fins, paired fins, forked tail"
+            },
+            "hang": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 52,
+                "height": 72
+              },
+              "alphaBBox": [
+                20,
+                20,
+                33,
+                52
+              ],
+              "alphaSize": {
+                "width": 13,
+                "height": 32
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 19,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 26,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 26.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.509615,
+                  "y": 0.277778
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.509615,
+                "y": 0.277778
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 23,
+              "finPixels": [
+                [
+                  30,
+                  36
+                ],
+                [
+                  31,
+                  37
+                ],
+                [
+                  30,
+                  38
+                ],
+                [
+                  31,
+                  43
+                ],
+                [
+                  31,
+                  44
+                ],
+                [
+                  32,
+                  44
+                ],
+                [
+                  31,
+                  45
+                ]
+              ],
+              "anatomyCue": "long body, rear-set dorsal/anal fins, paired fins, forked tail"
+            },
+            "held": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 52,
+                "height": 72
+              },
+              "alphaBBox": [
+                20,
+                20,
+                33,
+                52
+              ],
+              "alphaSize": {
+                "width": 13,
+                "height": 32
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 19,
+                "bottom": 20
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 26,
+                  "y": 20
+                },
+                "pixel": {
+                  "x": 26.5,
+                  "y": 20
+                },
+                "normalized": {
+                  "x": 0.509615,
+                  "y": 0.277778
+                },
+                "edge": "top"
+              },
+              "anchor": {
+                "x": 0.509615,
+                "y": 0.277778
+              },
+              "rotation": 0,
+              "bodyAngle": 1.5707963267948966,
+              "bodyLength": 23,
+              "finPixels": [
+                [
+                  30,
+                  36
+                ],
+                [
+                  31,
+                  37
+                ],
+                [
+                  30,
+                  38
+                ],
+                [
+                  31,
+                  43
+                ],
+                [
+                  31,
+                  44
+                ],
+                [
+                  32,
+                  44
+                ],
+                [
+                  31,
+                  45
+                ]
+              ],
+              "anatomyCue": "long body, rear-set dorsal/anal fins, paired fins, forked tail"
+            },
+            "free": {
+              "runtimeScale": 1,
+              "resampled": false,
+              "textureSize": {
+                "width": 79,
+                "height": 49
+              },
+              "alphaBBox": [
+                20,
+                20,
+                59,
+                31
+              ],
+              "alphaSize": {
+                "width": 39,
+                "height": 11
+              },
+              "transparentPadding": {
+                "left": 20,
+                "top": 20,
+                "right": 20,
+                "bottom": 18
+              },
+              "mouthAnchor": {
+                "opaquePixel": {
+                  "x": 58,
+                  "y": 25
+                },
+                "pixel": {
+                  "x": 59,
+                  "y": 25.5
+                },
+                "normalized": {
+                  "x": 0.746835,
+                  "y": 0.520408
+                },
+                "edge": "right"
+              },
+              "anchor": {
+                "x": 0.746835,
+                "y": 0.520408
+              },
+              "rotation": 0,
+              "bodyAngle": 0,
+              "bodyLength": 21,
+              "finPixels": [
+                [
+                  39,
+                  29
+                ],
+                [
+                  40,
+                  29
+                ],
+                [
+                  40,
+                  30
+                ],
+                [
+                  41,
+                  29
+                ],
+                [
+                  48,
+                  29
+                ],
+                [
+                  49,
+                  29
+                ],
+                [
+                  49,
+                  30
+                ],
+                [
+                  50,
+                  29
+                ]
+              ],
+              "anatomyCue": "long body, rear-set dorsal/anal fins, paired fins, forked tail"
+            }
+          }
+        }
+      }
+    }
+  }
+}

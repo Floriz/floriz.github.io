@@ -1,0 +1,2044 @@
+{
+  "version": "rebuild-v072-manual-treeline-refresh",
+  "selected": {
+    "heron": "heron_b_user_land_01",
+    "moose": "moose_waterline_a_01",
+    "mink": "mink_surface_flat_a_01"
+  },
+  "families": {
+    "heron": {
+      "heron_b_user_land_01": {
+        "canvas": [
+          24,
+          22
+        ],
+        "anchor": {
+          "x": 12,
+          "y": 20
+        },
+        "waterlineY": 20,
+        "frames": {
+          "idle": {
+            "frame": "idle",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              10,
+              5,
+              19,
+              20
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 43,
+            "centroid": [
+              13.535,
+              10.767
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "cd35a7a775f026a812c69080adbc41f9858dc87bd407dd74f1cb9893d79dacbb"
+          },
+          "takeoff_1": {
+            "frame": "takeoff_1",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              6,
+              1,
+              20,
+              14
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 69,
+            "centroid": [
+              10.783,
+              7.058
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "e21c615df9e57aa31e4d7aafb72b5004c6a8323a73f1f1c88088c6c47d7c79cd"
+          },
+          "takeoff_2": {
+            "frame": "takeoff_2",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              5,
+              3,
+              20,
+              15
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 61,
+            "centroid": [
+              10.328,
+              7.984
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "6b7f41d78083fc03e723be2e9dfb813e60437aa37dad3e1c43fc823b24c4cccc"
+          },
+          "flight_up": {
+            "frame": "flight_up",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              6,
+              1,
+              21,
+              16
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 73,
+            "centroid": [
+              11.945,
+              8.247
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "8e46b5f076ddf87cb1be3d1e1e474c9191427b702d1b0450bad6f04cb44f0e00"
+          },
+          "flight_mid": {
+            "frame": "flight_mid",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              5,
+              9,
+              20,
+              15
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 37,
+            "centroid": [
+              11.892,
+              11.324
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "8cd5d5a67a7a9ac6670a7077fe244a1ff79d63cb79707b501cc2f687e1241f1a"
+          },
+          "flight_down": {
+            "frame": "flight_down",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              6,
+              9,
+              20,
+              19
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 58,
+            "centroid": [
+              11.741,
+              13.362
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "d6ffc432c38d9a8f57a871d8f9d617072c6f654c4684ecadd5a91346eef34381"
+          },
+          "land_1": {
+            "frame": "land_1",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              9,
+              9,
+              18,
+              20
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 47,
+            "centroid": [
+              12.191,
+              13.319
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "c945d227f2e98f5fd21327d6b25a3fa30a17a80ea611d56240916e2eaf8a4b42"
+          },
+          "land_2": {
+            "frame": "land_2",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              10,
+              8,
+              17,
+              20
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 35,
+            "centroid": [
+              12.943,
+              12.114
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "962b36535ab1a0647979a851c0eb617159af49d148a2f46bfc27816837860bb6"
+          }
+        },
+        "adjacentPixelChanges": [
+          96,
+          57,
+          97,
+          72,
+          58,
+          41,
+          46
+        ],
+        "adjacentSilhouetteChanges": [
+          92,
+          34,
+          82,
+          56,
+          41,
+          17,
+          26
+        ],
+        "landingTransitionSilhouetteChanges": [
+          17,
+          26,
+          10
+        ],
+        "reviewStatus": "selected"
+      },
+      "heron_b_user_land_02": {
+        "canvas": [
+          24,
+          22
+        ],
+        "anchor": {
+          "x": 12,
+          "y": 20
+        },
+        "waterlineY": 20,
+        "frames": {
+          "idle": {
+            "frame": "idle",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              10,
+              5,
+              19,
+              20
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 43,
+            "centroid": [
+              13.535,
+              10.767
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "cd35a7a775f026a812c69080adbc41f9858dc87bd407dd74f1cb9893d79dacbb"
+          },
+          "takeoff_1": {
+            "frame": "takeoff_1",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              6,
+              1,
+              20,
+              14
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 69,
+            "centroid": [
+              10.783,
+              7.058
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "e21c615df9e57aa31e4d7aafb72b5004c6a8323a73f1f1c88088c6c47d7c79cd"
+          },
+          "takeoff_2": {
+            "frame": "takeoff_2",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              5,
+              3,
+              20,
+              15
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 61,
+            "centroid": [
+              10.328,
+              7.984
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "6b7f41d78083fc03e723be2e9dfb813e60437aa37dad3e1c43fc823b24c4cccc"
+          },
+          "flight_up": {
+            "frame": "flight_up",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              6,
+              1,
+              21,
+              16
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 73,
+            "centroid": [
+              11.945,
+              8.247
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "8e46b5f076ddf87cb1be3d1e1e474c9191427b702d1b0450bad6f04cb44f0e00"
+          },
+          "flight_mid": {
+            "frame": "flight_mid",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              5,
+              9,
+              20,
+              15
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 37,
+            "centroid": [
+              11.892,
+              11.324
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "8cd5d5a67a7a9ac6670a7077fe244a1ff79d63cb79707b501cc2f687e1241f1a"
+          },
+          "flight_down": {
+            "frame": "flight_down",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              6,
+              9,
+              20,
+              19
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 58,
+            "centroid": [
+              11.741,
+              13.362
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "d6ffc432c38d9a8f57a871d8f9d617072c6f654c4684ecadd5a91346eef34381"
+          },
+          "land_1": {
+            "frame": "land_1",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              8,
+              9,
+              19,
+              20
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 53,
+            "centroid": [
+              12.075,
+              13.453
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "41598924964c4369b351b6abd316d683beeee712505fbfe1b6b19dd80d3d046a"
+          },
+          "land_2": {
+            "frame": "land_2",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              10,
+              8,
+              17,
+              20
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 34,
+            "centroid": [
+              12.882,
+              12.235
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "4505c424263a59d04e844161d399625f1f3fce1d586b61c2efe1319678635d31"
+          }
+        },
+        "adjacentPixelChanges": [
+          96,
+          57,
+          97,
+          72,
+          58,
+          27,
+          50
+        ],
+        "adjacentSilhouetteChanges": [
+          92,
+          34,
+          82,
+          56,
+          41,
+          9,
+          33
+        ],
+        "landingTransitionSilhouetteChanges": [
+          9,
+          33,
+          11
+        ],
+        "reviewStatus": "alternate"
+      },
+      "heron_b_user_land_03": {
+        "canvas": [
+          24,
+          22
+        ],
+        "anchor": {
+          "x": 12,
+          "y": 20
+        },
+        "waterlineY": 20,
+        "frames": {
+          "idle": {
+            "frame": "idle",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              10,
+              5,
+              19,
+              20
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 43,
+            "centroid": [
+              13.535,
+              10.767
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "cd35a7a775f026a812c69080adbc41f9858dc87bd407dd74f1cb9893d79dacbb"
+          },
+          "takeoff_1": {
+            "frame": "takeoff_1",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              6,
+              1,
+              20,
+              14
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 69,
+            "centroid": [
+              10.783,
+              7.058
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "e21c615df9e57aa31e4d7aafb72b5004c6a8323a73f1f1c88088c6c47d7c79cd"
+          },
+          "takeoff_2": {
+            "frame": "takeoff_2",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              5,
+              3,
+              20,
+              15
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 61,
+            "centroid": [
+              10.328,
+              7.984
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "6b7f41d78083fc03e723be2e9dfb813e60437aa37dad3e1c43fc823b24c4cccc"
+          },
+          "flight_up": {
+            "frame": "flight_up",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              6,
+              1,
+              21,
+              16
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 73,
+            "centroid": [
+              11.945,
+              8.247
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "8e46b5f076ddf87cb1be3d1e1e474c9191427b702d1b0450bad6f04cb44f0e00"
+          },
+          "flight_mid": {
+            "frame": "flight_mid",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              5,
+              9,
+              20,
+              15
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 37,
+            "centroid": [
+              11.892,
+              11.324
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "8cd5d5a67a7a9ac6670a7077fe244a1ff79d63cb79707b501cc2f687e1241f1a"
+          },
+          "flight_down": {
+            "frame": "flight_down",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              6,
+              9,
+              20,
+              19
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 58,
+            "centroid": [
+              11.741,
+              13.362
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "d6ffc432c38d9a8f57a871d8f9d617072c6f654c4684ecadd5a91346eef34381"
+          },
+          "land_1": {
+            "frame": "land_1",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              9,
+              9,
+              18,
+              20
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 46,
+            "centroid": [
+              12.37,
+              13.13
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "9fb183f7b0f2d612f6df5d5123ecf906898fec34e75fd206d20927b1ef83e4c7"
+          },
+          "land_2": {
+            "frame": "land_2",
+            "size": [
+              24,
+              22
+            ],
+            "bbox": [
+              10,
+              6,
+              19,
+              20
+            ],
+            "anchor": {
+              "x": 12,
+              "y": 20
+            },
+            "waterlineY": 20,
+            "alphaPixels": 40,
+            "centroid": [
+              13.425,
+              11.175
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "cc4a078b72a35e279ef14dde81bdaf0270fd966564aff72c78cf55a055bce428"
+          }
+        },
+        "adjacentPixelChanges": [
+          96,
+          57,
+          97,
+          72,
+          58,
+          35,
+          47
+        ],
+        "adjacentSilhouetteChanges": [
+          92,
+          34,
+          82,
+          56,
+          41,
+          20,
+          30
+        ],
+        "landingTransitionSilhouetteChanges": [
+          20,
+          30,
+          3
+        ],
+        "reviewStatus": "alternate"
+      }
+    },
+    "moose": {
+      "moose_waterline_a_01": {
+        "canvas": [
+          26,
+          14
+        ],
+        "anchor": {
+          "x": 13,
+          "y": 12
+        },
+        "waterlineY": 12,
+        "frames": {
+          "f0": {
+            "frame": "f0",
+            "size": [
+              26,
+              14
+            ],
+            "bbox": [
+              7,
+              2,
+              19,
+              12
+            ],
+            "anchor": {
+              "x": 13,
+              "y": 12
+            },
+            "waterlineY": 12,
+            "alphaPixels": 74,
+            "centroid": [
+              12.662,
+              7.176
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "5a57eb58110462a6229f3e45a93c4439b6496833c6228f13f012902ce65314fb"
+          },
+          "f1": {
+            "frame": "f1",
+            "size": [
+              26,
+              14
+            ],
+            "bbox": [
+              7,
+              2,
+              19,
+              12
+            ],
+            "anchor": {
+              "x": 13,
+              "y": 12
+            },
+            "waterlineY": 12,
+            "alphaPixels": 73,
+            "centroid": [
+              12.644,
+              7
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "4cb57f8eb239b8238d4221a1f4af66c19a6e89184a6d988856e2afdc4634855e"
+          },
+          "f3": {
+            "frame": "f3",
+            "size": [
+              26,
+              14
+            ],
+            "bbox": [
+              7,
+              2,
+              19,
+              12
+            ],
+            "anchor": {
+              "x": 13,
+              "y": 12
+            },
+            "waterlineY": 12,
+            "alphaPixels": 74,
+            "centroid": [
+              12.635,
+              7.122
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "8cee2dfc381df06d378349fa9ebeabb1b52565004233b3e54820cd07403bc5b5"
+          }
+        },
+        "adjacentPixelChanges": [
+          38,
+          40
+        ],
+        "adjacentSilhouetteChanges": [
+          11,
+          13
+        ],
+        "submergePx": 2,
+        "contactProfile": "local_water_wake",
+        "wakeLength": 9,
+        "ripplePhase": 0,
+        "reviewStatus": "selected-user-edited",
+        "activeFrameOrder": [
+          "f0",
+          "f1",
+          "f3"
+        ]
+      },
+      "moose_dusk_swim_b_02": {
+        "canvas": [
+          26,
+          14
+        ],
+        "anchor": {
+          "x": 13,
+          "y": 12
+        },
+        "waterlineY": 12,
+        "frames": {
+          "f0": {
+            "frame": "f0",
+            "size": [
+              26,
+              14
+            ],
+            "bbox": [
+              7,
+              1,
+              19,
+              12
+            ],
+            "anchor": {
+              "x": 13,
+              "y": 12
+            },
+            "waterlineY": 12,
+            "alphaPixels": 81,
+            "centroid": [
+              12.827,
+              6.802
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "500bebfe084e59f646fd1d4d54e09e9e0e65a73862835cc989d1dad6549c98b8"
+          },
+          "f1": {
+            "frame": "f1",
+            "size": [
+              26,
+              14
+            ],
+            "bbox": [
+              7,
+              1,
+              19,
+              12
+            ],
+            "anchor": {
+              "x": 13,
+              "y": 12
+            },
+            "waterlineY": 12,
+            "alphaPixels": 82,
+            "centroid": [
+              12.902,
+              6.805
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "db1337bb0f94708dd552a814dcbbfd326869c86911bf0ca54660b737320a1e2a"
+          },
+          "f2": {
+            "frame": "f2",
+            "size": [
+              26,
+              14
+            ],
+            "bbox": [
+              7,
+              1,
+              19,
+              12
+            ],
+            "anchor": {
+              "x": 13,
+              "y": 12
+            },
+            "waterlineY": 12,
+            "alphaPixels": 81,
+            "centroid": [
+              12.827,
+              6.827
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "2704590eca75a7b7a2d93aad4f8f106233b724ac4cdf2230634f0562c42a6bf8"
+          },
+          "f3": {
+            "frame": "f3",
+            "size": [
+              26,
+              14
+            ],
+            "bbox": [
+              7,
+              1,
+              19,
+              12
+            ],
+            "anchor": {
+              "x": 13,
+              "y": 12
+            },
+            "waterlineY": 12,
+            "alphaPixels": 82,
+            "centroid": [
+              12.89,
+              6.89
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "1e7fa42551df6b795b5b7ecb53e18c64746dc3e67b1ee9c9d4fe8aebf4c34e4e"
+          },
+          "f4": {
+            "frame": "f4",
+            "size": [
+              26,
+              14
+            ],
+            "bbox": [
+              7,
+              1,
+              19,
+              12
+            ],
+            "anchor": {
+              "x": 13,
+              "y": 12
+            },
+            "waterlineY": 12,
+            "alphaPixels": 81,
+            "centroid": [
+              12.926,
+              6.852
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "613425c95cc18b81ea09962a772bf18c420fd4b1f306bf8338bffd263a0c3639"
+          },
+          "f5": {
+            "frame": "f5",
+            "size": [
+              26,
+              14
+            ],
+            "bbox": [
+              7,
+              1,
+              19,
+              12
+            ],
+            "anchor": {
+              "x": 13,
+              "y": 12
+            },
+            "waterlineY": 12,
+            "alphaPixels": 82,
+            "centroid": [
+              12.902,
+              6.805
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "119363eca1e7f763dd9df1381165b91924bb07881b8acb1050538647df0a9e4a"
+          }
+        },
+        "adjacentPixelChanges": [
+          44,
+          45,
+          47,
+          47,
+          25
+        ],
+        "adjacentSilhouetteChanges": [
+          5,
+          3,
+          3,
+          5,
+          3
+        ],
+        "submergePx": 2,
+        "contactProfile": "local_water_calm",
+        "wakeLength": 7,
+        "ripplePhase": 0.33,
+        "reviewStatus": "alternate"
+      },
+      "moose_low_wade_c_03": {
+        "canvas": [
+          26,
+          14
+        ],
+        "anchor": {
+          "x": 13,
+          "y": 12
+        },
+        "waterlineY": 12,
+        "frames": {
+          "f0": {
+            "frame": "f0",
+            "size": [
+              26,
+              14
+            ],
+            "bbox": [
+              6,
+              1,
+              19,
+              12
+            ],
+            "anchor": {
+              "x": 13,
+              "y": 12
+            },
+            "waterlineY": 12,
+            "alphaPixels": 75,
+            "centroid": [
+              13.133,
+              6.8
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "d925ed8b81b0dce1488cb7c6d59f17e56ce09f884b5ddd9ca32175694fca4cd8"
+          },
+          "f1": {
+            "frame": "f1",
+            "size": [
+              26,
+              14
+            ],
+            "bbox": [
+              6,
+              1,
+              19,
+              12
+            ],
+            "anchor": {
+              "x": 13,
+              "y": 12
+            },
+            "waterlineY": 12,
+            "alphaPixels": 76,
+            "centroid": [
+              13.276,
+              6.776
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "a1818ad6372fa3e8234e8e808cbe1fa3a47a6e6b51bbb902364128e71b7b40f7"
+          },
+          "f2": {
+            "frame": "f2",
+            "size": [
+              26,
+              14
+            ],
+            "bbox": [
+              6,
+              1,
+              19,
+              12
+            ],
+            "anchor": {
+              "x": 13,
+              "y": 12
+            },
+            "waterlineY": 12,
+            "alphaPixels": 75,
+            "centroid": [
+              13.133,
+              6.773
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "b08156fad2347af55874d254941d008954eb43686dcdd4162f62ab2d2b4d83f3"
+          },
+          "f3": {
+            "frame": "f3",
+            "size": [
+              26,
+              14
+            ],
+            "bbox": [
+              6,
+              1,
+              19,
+              12
+            ],
+            "anchor": {
+              "x": 13,
+              "y": 12
+            },
+            "waterlineY": 12,
+            "alphaPixels": 75,
+            "centroid": [
+              13.147,
+              6.907
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "d48b6d2dcd084e726de72acd10377d9ba0ec2d7f85ae51532aa00901c4a9ca77"
+          },
+          "f4": {
+            "frame": "f4",
+            "size": [
+              26,
+              14
+            ],
+            "bbox": [
+              6,
+              1,
+              19,
+              12
+            ],
+            "anchor": {
+              "x": 13,
+              "y": 12
+            },
+            "waterlineY": 12,
+            "alphaPixels": 75,
+            "centroid": [
+              13.133,
+              6.747
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "8370a9c1221fc4c931ddca4d89fe40c1331047e804f96035299512817bf46a7c"
+          },
+          "f5": {
+            "frame": "f5",
+            "size": [
+              26,
+              14
+            ],
+            "bbox": [
+              6,
+              1,
+              19,
+              12
+            ],
+            "anchor": {
+              "x": 13,
+              "y": 12
+            },
+            "waterlineY": 12,
+            "alphaPixels": 76,
+            "centroid": [
+              13.184,
+              6.75
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "2298aaa9ee072a714e0bea2d42481956922930142900cf20fd918b6ff763ef35"
+          }
+        },
+        "adjacentPixelChanges": [
+          45,
+          38,
+          28,
+          26,
+          34
+        ],
+        "adjacentSilhouetteChanges": [
+          5,
+          3,
+          2,
+          4,
+          3
+        ],
+        "submergePx": 2,
+        "contactProfile": "local_water_rings",
+        "wakeLength": 6,
+        "ripplePhase": 0.66,
+        "reviewStatus": "alternate"
+      }
+    },
+    "mink": {
+      "mink_surface_flat_a_01": {
+        "canvas": [
+          12,
+          6
+        ],
+        "anchor": {
+          "x": 6,
+          "y": 4
+        },
+        "waterlineY": 4,
+        "frames": {
+          "f0": {
+            "frame": "f0",
+            "size": [
+              12,
+              6
+            ],
+            "bbox": [
+              1,
+              2,
+              11,
+              4
+            ],
+            "anchor": {
+              "x": 6,
+              "y": 4
+            },
+            "waterlineY": 4,
+            "alphaPixels": 12,
+            "centroid": [
+              6,
+              2.833
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "387bad5f7154c874f8e5caba76071f4f576390c7af6136a067057904e2269074"
+          },
+          "f1": {
+            "frame": "f1",
+            "size": [
+              12,
+              6
+            ],
+            "bbox": [
+              1,
+              2,
+              10,
+              4
+            ],
+            "anchor": {
+              "x": 6,
+              "y": 4
+            },
+            "waterlineY": 4,
+            "alphaPixels": 11,
+            "centroid": [
+              5.636,
+              2.818
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "9b4101d50b407638e05bd070b8fed805d37b241e661ac31b7d55b247813da647"
+          },
+          "f2": {
+            "frame": "f2",
+            "size": [
+              12,
+              6
+            ],
+            "bbox": [
+              1,
+              2,
+              11,
+              4
+            ],
+            "anchor": {
+              "x": 6,
+              "y": 4
+            },
+            "waterlineY": 4,
+            "alphaPixels": 12,
+            "centroid": [
+              6,
+              2.833
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "387bad5f7154c874f8e5caba76071f4f576390c7af6136a067057904e2269074"
+          },
+          "f3": {
+            "frame": "f3",
+            "size": [
+              12,
+              6
+            ],
+            "bbox": [
+              2,
+              2,
+              10,
+              4
+            ],
+            "anchor": {
+              "x": 6,
+              "y": 4
+            },
+            "waterlineY": 4,
+            "alphaPixels": 10,
+            "centroid": [
+              6.1,
+              2.8
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "eb556a8834889f7f8ccc3cec68379637719d13b081144d3c78e5226b7880306e"
+          },
+          "f4": {
+            "frame": "f4",
+            "size": [
+              12,
+              6
+            ],
+            "bbox": [
+              1,
+              2,
+              10,
+              4
+            ],
+            "anchor": {
+              "x": 6,
+              "y": 4
+            },
+            "waterlineY": 4,
+            "alphaPixels": 11,
+            "centroid": [
+              5.636,
+              2.818
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": true,
+            "sha256": "9b4101d50b407638e05bd070b8fed805d37b241e661ac31b7d55b247813da647"
+          }
+        },
+        "adjacentPixelChanges": [
+          2,
+          2,
+          4,
+          2
+        ],
+        "adjacentSilhouetteChanges": [
+          1,
+          1,
+          2,
+          1
+        ],
+        "submergePx": 0,
+        "contactProfile": "local_water_flat",
+        "wakeLength": 6,
+        "ripplePhase": 0,
+        "reviewStatus": "selected-user-edited",
+        "paletteProfile": "neutral_brown_dusk_no_purple",
+        "activeFrameOrder": [
+          "f0",
+          "f1",
+          "f2",
+          "f3",
+          "f4"
+        ]
+      },
+      "mink_low_glide_b_02": {
+        "canvas": [
+          12,
+          6
+        ],
+        "anchor": {
+          "x": 6,
+          "y": 4
+        },
+        "waterlineY": 4,
+        "frames": {
+          "f0": {
+            "frame": "f0",
+            "size": [
+              12,
+              6
+            ],
+            "bbox": [
+              2,
+              2,
+              10,
+              4
+            ],
+            "anchor": {
+              "x": 6,
+              "y": 4
+            },
+            "waterlineY": 4,
+            "alphaPixels": 10,
+            "centroid": [
+              5.9,
+              2.8
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "2d922f44ac88e0826c7c18d3c4a2e6d1c465af97afb2a32739f7c740e74dd7dc"
+          },
+          "f1": {
+            "frame": "f1",
+            "size": [
+              12,
+              6
+            ],
+            "bbox": [
+              2,
+              2,
+              10,
+              4
+            ],
+            "anchor": {
+              "x": 6,
+              "y": 4
+            },
+            "waterlineY": 4,
+            "alphaPixels": 9,
+            "centroid": [
+              5.778,
+              2.889
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "89622e5756616acf1388eb6547ac72207e191b93f9a9aa4cd24de08b7df5b8da"
+          },
+          "f2": {
+            "frame": "f2",
+            "size": [
+              12,
+              6
+            ],
+            "bbox": [
+              2,
+              2,
+              10,
+              4
+            ],
+            "anchor": {
+              "x": 6,
+              "y": 4
+            },
+            "waterlineY": 4,
+            "alphaPixels": 10,
+            "centroid": [
+              5.9,
+              2.8
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "9020ea06c1e7d3ed57b69932c94447306b819f5972f8c0fed6a95f8e4d1a6089"
+          },
+          "f3": {
+            "frame": "f3",
+            "size": [
+              12,
+              6
+            ],
+            "bbox": [
+              2,
+              2,
+              11,
+              4
+            ],
+            "anchor": {
+              "x": 6,
+              "y": 4
+            },
+            "waterlineY": 4,
+            "alphaPixels": 10,
+            "centroid": [
+              6.3,
+              2.9
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "91bdcd7dfbdc7656cd6d38aed8bcfcf8cd9d31d943b991bfbc402e5989757a46"
+          },
+          "f4": {
+            "frame": "f4",
+            "size": [
+              12,
+              6
+            ],
+            "bbox": [
+              1,
+              2,
+              11,
+              4
+            ],
+            "anchor": {
+              "x": 6,
+              "y": 4
+            },
+            "waterlineY": 4,
+            "alphaPixels": 12,
+            "centroid": [
+              6,
+              2.833
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "8018ab2dc0746adfb4ed5b21d408e2e9807ccb9689123eabc7c30d0c671e18dd"
+          }
+        },
+        "adjacentPixelChanges": [
+          2,
+          3,
+          6,
+          4
+        ],
+        "adjacentSilhouetteChanges": [
+          1,
+          1,
+          4,
+          2
+        ],
+        "submergePx": 0,
+        "contactProfile": "local_water_glide",
+        "wakeLength": 5,
+        "ripplePhase": 0.33,
+        "reviewStatus": "alternate"
+      },
+      "mink_dusk_slip_c_03": {
+        "canvas": [
+          12,
+          6
+        ],
+        "anchor": {
+          "x": 6,
+          "y": 4
+        },
+        "waterlineY": 4,
+        "frames": {
+          "f0": {
+            "frame": "f0",
+            "size": [
+              12,
+              6
+            ],
+            "bbox": [
+              1,
+              2,
+              11,
+              4
+            ],
+            "anchor": {
+              "x": 6,
+              "y": 4
+            },
+            "waterlineY": 4,
+            "alphaPixels": 17,
+            "centroid": [
+              5.706,
+              2.588
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "c55e288a6a0236d543411e22bb6524a3b90be2ff0585c834f517f17104b848c1"
+          },
+          "f1": {
+            "frame": "f1",
+            "size": [
+              12,
+              6
+            ],
+            "bbox": [
+              1,
+              2,
+              11,
+              4
+            ],
+            "anchor": {
+              "x": 6,
+              "y": 4
+            },
+            "waterlineY": 4,
+            "alphaPixels": 17,
+            "centroid": [
+              5.706,
+              2.588
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "d831d66d1185e52cf6faf27684553dcad1125a65450633efcc68ca696c066b95"
+          },
+          "f2": {
+            "frame": "f2",
+            "size": [
+              12,
+              6
+            ],
+            "bbox": [
+              1,
+              2,
+              11,
+              4
+            ],
+            "anchor": {
+              "x": 6,
+              "y": 4
+            },
+            "waterlineY": 4,
+            "alphaPixels": 16,
+            "centroid": [
+              5.625,
+              2.625
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "b12ef98a77eb016db30f701c26bf731aa96ddb1d383ce944019f25e137c76108"
+          },
+          "f3": {
+            "frame": "f3",
+            "size": [
+              12,
+              6
+            ],
+            "bbox": [
+              1,
+              2,
+              11,
+              4
+            ],
+            "anchor": {
+              "x": 6,
+              "y": 4
+            },
+            "waterlineY": 4,
+            "alphaPixels": 17,
+            "centroid": [
+              5.706,
+              2.588
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "917bb0e09630d9422c0990c52cc6f36bb639c7a46e27120a294fbb513d714d06"
+          },
+          "f4": {
+            "frame": "f4",
+            "size": [
+              12,
+              6
+            ],
+            "bbox": [
+              1,
+              2,
+              11,
+              4
+            ],
+            "anchor": {
+              "x": 6,
+              "y": 4
+            },
+            "waterlineY": 4,
+            "alphaPixels": 17,
+            "centroid": [
+              5.706,
+              2.588
+            ],
+            "components": 1,
+            "touchesEdge": false,
+            "alphaValues": [
+              0,
+              255
+            ],
+            "protected": false,
+            "sha256": "9786d909130fe8029ec5276c5ce159acb5e686552ec5b9c2f7bd7765f92bcb68"
+          }
+        },
+        "adjacentPixelChanges": [
+          2,
+          4,
+          4,
+          4
+        ],
+        "adjacentSilhouetteChanges": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "submergePx": 0,
+        "contactProfile": "local_water_soft",
+        "wakeLength": 4,
+        "ripplePhase": 0.66,
+        "reviewStatus": "alternate"
+      }
+    }
+  },
+  "candidateValidationErrors": {
+    "moose_waterline_a_01": [],
+    "moose_dusk_swim_b_02": [],
+    "moose_low_wade_c_03": [],
+    "mink_surface_flat_a_01": [],
+    "mink_low_glide_b_02": [],
+    "mink_dusk_slip_c_03": []
+  },
+  "validationErrors": [],
+  "protectedInputs": {
+    "heron": {
+      "flight_down.png": "d6ffc432c38d9a8f57a871d8f9d617072c6f654c4684ecadd5a91346eef34381",
+      "flight_mid.png": "8cd5d5a67a7a9ac6670a7077fe244a1ff79d63cb79707b501cc2f687e1241f1a",
+      "flight_up.png": "8e46b5f076ddf87cb1be3d1e1e474c9191427b702d1b0450bad6f04cb44f0e00",
+      "idle.png": "cd35a7a775f026a812c69080adbc41f9858dc87bd407dd74f1cb9893d79dacbb",
+      "land.png": "36e6ffba625213edac140c6cb92f50a5bce4a301b7374d3bf17755fea018683e",
+      "takeoff_1.png": "e21c615df9e57aa31e4d7aafb72b5004c6a8323a73f1f1c88088c6c47d7c79cd",
+      "takeoff_2.png": "6b7f41d78083fc03e723be2e9dfb813e60437aa37dad3e1c43fc823b24c4cccc"
+    },
+    "mink": {
+      "f0.png": "387bad5f7154c874f8e5caba76071f4f576390c7af6136a067057904e2269074",
+      "f1.png": "9b4101d50b407638e05bd070b8fed805d37b241e661ac31b7d55b247813da647",
+      "f2.png": "387bad5f7154c874f8e5caba76071f4f576390c7af6136a067057904e2269074",
+      "f3.png": "eb556a8834889f7f8ccc3cec68379637719d13b081144d3c78e5226b7880306e",
+      "f4.png": "9b4101d50b407638e05bd070b8fed805d37b241e661ac31b7d55b247813da647"
+    },
+    "moose": {
+      "f0.png": "5a57eb58110462a6229f3e45a93c4439b6496833c6228f13f012902ce65314fb",
+      "f1.png": "4cb57f8eb239b8238d4221a1f4af66c19a6e89184a6d988856e2afdc4634855e",
+      "f3.png": "8cee2dfc381df06d378349fa9ebeabb1b52565004233b3e54820cd07403bc5b5"
+    }
+  },
+  "waterContact": {
+    "mode": "runtime-local-lake-sampling",
+    "bakedWaterPixels": false
+  },
+  "activeFrameOrder": {
+    "mink": [
+      "f0",
+      "f1",
+      "f2",
+      "f3",
+      "f4"
+    ],
+    "moose": [
+      "f0",
+      "f1",
+      "f3"
+    ]
+  }
+}

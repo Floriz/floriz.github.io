@@ -1,0 +1,841 @@
+{
+  "bass": {
+    "fight": {
+      "anchor": {
+        "x": 0.6356,
+        "y": 0.5
+      },
+      "rotation": -1.5707963267948966,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 9,
+      "sourceSize": {
+        "width": 17,
+        "height": 8
+      },
+      "textureSize": {
+        "width": 57,
+        "height": 48
+      },
+      "alphaBBox": [
+        20,
+        20,
+        37,
+        28
+      ]
+    },
+    "hang": {
+      "anchor": {
+        "x": 0.4924,
+        "y": 0.3509
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 12,
+      "sourceSize": {
+        "width": 8,
+        "height": 17
+      },
+      "textureSize": {
+        "width": 48,
+        "height": 57
+      },
+      "alphaBBox": [
+        20,
+        20,
+        28,
+        37
+      ]
+    },
+    "base": {
+      "anchor": {
+        "x": 0.4924,
+        "y": 0.3509
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 12,
+      "sourceSize": {
+        "width": 8,
+        "height": 17
+      },
+      "textureSize": {
+        "width": 48,
+        "height": 57
+      },
+      "alphaBBox": [
+        20,
+        20,
+        28,
+        37
+      ]
+    },
+    "held": {
+      "anchor": {
+        "x": 0.4924,
+        "y": 0.3509
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 12,
+      "sourceSize": {
+        "width": 8,
+        "height": 17
+      },
+      "textureSize": {
+        "width": 48,
+        "height": 57
+      },
+      "alphaBBox": [
+        20,
+        20,
+        28,
+        37
+      ]
+    },
+    "free": {
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotation": 0,
+      "bodyAngle": 0,
+      "bodyLength": 9,
+      "sourceSize": {
+        "width": 20,
+        "height": 8
+      },
+      "textureSize": {
+        "width": 60,
+        "height": 48
+      },
+      "alphaBBox": [
+        20,
+        20,
+        40,
+        28
+      ]
+    }
+  },
+  "walleye": {
+    "fight": {
+      "anchor": {
+        "x": 0.6491,
+        "y": 0.5
+      },
+      "rotation": -1.5707963267948966,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 11,
+      "sourceSize": {
+        "width": 19,
+        "height": 7
+      },
+      "textureSize": {
+        "width": 59,
+        "height": 47
+      },
+      "alphaBBox": [
+        20,
+        20,
+        39,
+        27
+      ]
+    },
+    "hang": {
+      "anchor": {
+        "x": 0.5074,
+        "y": 0.3647
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 13,
+      "sourceSize": {
+        "width": 7,
+        "height": 19
+      },
+      "textureSize": {
+        "width": 47,
+        "height": 59
+      },
+      "alphaBBox": [
+        20,
+        20,
+        27,
+        39
+      ]
+    },
+    "base": {
+      "anchor": {
+        "x": 0.5074,
+        "y": 0.3647
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 13,
+      "sourceSize": {
+        "width": 7,
+        "height": 19
+      },
+      "textureSize": {
+        "width": 47,
+        "height": 59
+      },
+      "alphaBBox": [
+        20,
+        20,
+        27,
+        39
+      ]
+    },
+    "held": {
+      "anchor": {
+        "x": 0.5074,
+        "y": 0.3647
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 13,
+      "sourceSize": {
+        "width": 7,
+        "height": 19
+      },
+      "textureSize": {
+        "width": 47,
+        "height": 59
+      },
+      "alphaBBox": [
+        20,
+        20,
+        27,
+        39
+      ]
+    },
+    "free": {
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotation": 0,
+      "bodyAngle": 0,
+      "bodyLength": 9,
+      "sourceSize": {
+        "width": 20,
+        "height": 6
+      },
+      "textureSize": {
+        "width": 60,
+        "height": 46
+      },
+      "alphaBBox": [
+        20,
+        20,
+        40,
+        26
+      ]
+    }
+  },
+  "perch": {
+    "fight": {
+      "anchor": {
+        "x": 0.6104,
+        "y": 0.5
+      },
+      "rotation": -1.5707963267948966,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 7,
+      "sourceSize": {
+        "width": 13,
+        "height": 6
+      },
+      "textureSize": {
+        "width": 53,
+        "height": 46
+      },
+      "alphaBBox": [
+        20,
+        20,
+        33,
+        26
+      ]
+    },
+    "hang": {
+      "anchor": {
+        "x": 0.5065,
+        "y": 0.397
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 9,
+      "sourceSize": {
+        "width": 6,
+        "height": 13
+      },
+      "textureSize": {
+        "width": 46,
+        "height": 53
+      },
+      "alphaBBox": [
+        20,
+        20,
+        26,
+        33
+      ]
+    },
+    "base": {
+      "anchor": {
+        "x": 0.5065,
+        "y": 0.397
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 9,
+      "sourceSize": {
+        "width": 6,
+        "height": 13
+      },
+      "textureSize": {
+        "width": 46,
+        "height": 53
+      },
+      "alphaBBox": [
+        20,
+        20,
+        26,
+        33
+      ]
+    },
+    "held": {
+      "anchor": {
+        "x": 0.5065,
+        "y": 0.397
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 9,
+      "sourceSize": {
+        "width": 6,
+        "height": 13
+      },
+      "textureSize": {
+        "width": 46,
+        "height": 53
+      },
+      "alphaBBox": [
+        20,
+        20,
+        26,
+        33
+      ]
+    },
+    "free": {
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotation": 0,
+      "bodyAngle": 0,
+      "bodyLength": 7,
+      "sourceSize": {
+        "width": 14,
+        "height": 5
+      },
+      "textureSize": {
+        "width": 54,
+        "height": 45
+      },
+      "alphaBBox": [
+        20,
+        20,
+        34,
+        25
+      ]
+    }
+  },
+  "trout": {
+    "fight": {
+      "anchor": {
+        "x": 0.6372,
+        "y": 0.5
+      },
+      "rotation": -1.5707963267948966,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 10,
+      "sourceSize": {
+        "width": 17,
+        "height": 6
+      },
+      "textureSize": {
+        "width": 57,
+        "height": 46
+      },
+      "alphaBBox": [
+        20,
+        20,
+        37,
+        26
+      ]
+    },
+    "hang": {
+      "anchor": {
+        "x": 0.5065,
+        "y": 0.3748
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 12,
+      "sourceSize": {
+        "width": 6,
+        "height": 17
+      },
+      "textureSize": {
+        "width": 46,
+        "height": 57
+      },
+      "alphaBBox": [
+        20,
+        20,
+        26,
+        37
+      ]
+    },
+    "base": {
+      "anchor": {
+        "x": 0.5065,
+        "y": 0.3748
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 12,
+      "sourceSize": {
+        "width": 6,
+        "height": 17
+      },
+      "textureSize": {
+        "width": 46,
+        "height": 57
+      },
+      "alphaBBox": [
+        20,
+        20,
+        26,
+        37
+      ]
+    },
+    "held": {
+      "anchor": {
+        "x": 0.5065,
+        "y": 0.3748
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 12,
+      "sourceSize": {
+        "width": 6,
+        "height": 17
+      },
+      "textureSize": {
+        "width": 46,
+        "height": 57
+      },
+      "alphaBBox": [
+        20,
+        20,
+        26,
+        37
+      ]
+    },
+    "free": {
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotation": 0,
+      "bodyAngle": 0,
+      "bodyLength": 7,
+      "sourceSize": {
+        "width": 17,
+        "height": 5
+      },
+      "textureSize": {
+        "width": 57,
+        "height": 45
+      },
+      "alphaBBox": [
+        20,
+        20,
+        37,
+        25
+      ]
+    }
+  },
+  "bluegill": {
+    "fight": {
+      "anchor": {
+        "x": 0.5882,
+        "y": 0.5
+      },
+      "rotation": -1.5707963267948966,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 6,
+      "sourceSize": {
+        "width": 10,
+        "height": 5
+      },
+      "textureSize": {
+        "width": 50,
+        "height": 45
+      },
+      "alphaBBox": [
+        20,
+        20,
+        30,
+        25
+      ]
+    },
+    "hang": {
+      "anchor": {
+        "x": 0.5056,
+        "y": 0.416
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 7,
+      "sourceSize": {
+        "width": 5,
+        "height": 10
+      },
+      "textureSize": {
+        "width": 45,
+        "height": 50
+      },
+      "alphaBBox": [
+        20,
+        20,
+        25,
+        30
+      ]
+    },
+    "base": {
+      "anchor": {
+        "x": 0.5056,
+        "y": 0.416
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 7,
+      "sourceSize": {
+        "width": 5,
+        "height": 10
+      },
+      "textureSize": {
+        "width": 45,
+        "height": 50
+      },
+      "alphaBBox": [
+        20,
+        20,
+        25,
+        30
+      ]
+    },
+    "held": {
+      "anchor": {
+        "x": 0.5056,
+        "y": 0.416
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 7,
+      "sourceSize": {
+        "width": 5,
+        "height": 10
+      },
+      "textureSize": {
+        "width": 45,
+        "height": 50
+      },
+      "alphaBBox": [
+        20,
+        20,
+        25,
+        30
+      ]
+    },
+    "free": {
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotation": 0,
+      "bodyAngle": 0,
+      "bodyLength": 5,
+      "sourceSize": {
+        "width": 10,
+        "height": 5
+      },
+      "textureSize": {
+        "width": 50,
+        "height": 45
+      },
+      "alphaBBox": [
+        20,
+        20,
+        30,
+        25
+      ]
+    }
+  },
+  "musky": {
+    "fight": {
+      "anchor": {
+        "x": 0.6758,
+        "y": 0.5
+      },
+      "rotation": -1.5707963267948966,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 14,
+      "sourceSize": {
+        "width": 24,
+        "height": 9
+      },
+      "textureSize": {
+        "width": 64,
+        "height": 49
+      },
+      "alphaBBox": [
+        20,
+        20,
+        44,
+        29
+      ]
+    },
+    "hang": {
+      "anchor": {
+        "x": 0.5092,
+        "y": 0.3425
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 17,
+      "sourceSize": {
+        "width": 9,
+        "height": 24
+      },
+      "textureSize": {
+        "width": 49,
+        "height": 64
+      },
+      "alphaBBox": [
+        20,
+        20,
+        29,
+        44
+      ]
+    },
+    "base": {
+      "anchor": {
+        "x": 0.5092,
+        "y": 0.3425
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 17,
+      "sourceSize": {
+        "width": 9,
+        "height": 24
+      },
+      "textureSize": {
+        "width": 49,
+        "height": 64
+      },
+      "alphaBBox": [
+        20,
+        20,
+        29,
+        44
+      ]
+    },
+    "held": {
+      "anchor": {
+        "x": 0.5092,
+        "y": 0.3425
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963267948966,
+      "bodyLength": 17,
+      "sourceSize": {
+        "width": 9,
+        "height": 24
+      },
+      "textureSize": {
+        "width": 49,
+        "height": 64
+      },
+      "alphaBBox": [
+        20,
+        20,
+        29,
+        44
+      ]
+    },
+    "free": {
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "rotation": 0,
+      "bodyAngle": 0,
+      "bodyLength": 14,
+      "sourceSize": {
+        "width": 29,
+        "height": 7
+      },
+      "textureSize": {
+        "width": 69,
+        "height": 47
+      },
+      "alphaBBox": [
+        20,
+        20,
+        49,
+        27
+      ]
+    }
+  },
+  "weeds": {
+    "base": {
+      "size": [
+        56,
+        68
+      ],
+      "alphaBBox": [
+        21,
+        20,
+        34,
+        42
+      ],
+      "anchor": {
+        "x": 0.4911,
+        "y": 0.2941
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963268,
+      "bodyLength": 13,
+      "sourceSize": {
+        "width": 13,
+        "height": 22
+      },
+      "textureSize": {
+        "width": 56,
+        "height": 68
+      }
+    },
+    "fight": {
+      "size": [
+        56,
+        68
+      ],
+      "alphaBBox": [
+        21,
+        20,
+        34,
+        42
+      ],
+      "anchor": {
+        "x": 0.4911,
+        "y": 0.2941
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963268,
+      "bodyLength": 13,
+      "sourceSize": {
+        "width": 13,
+        "height": 22
+      },
+      "textureSize": {
+        "width": 56,
+        "height": 68
+      }
+    },
+    "hang": {
+      "size": [
+        56,
+        68
+      ],
+      "alphaBBox": [
+        21,
+        20,
+        34,
+        42
+      ],
+      "anchor": {
+        "x": 0.4911,
+        "y": 0.2941
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963268,
+      "bodyLength": 13,
+      "sourceSize": {
+        "width": 13,
+        "height": 22
+      },
+      "textureSize": {
+        "width": 56,
+        "height": 68
+      }
+    },
+    "held": {
+      "size": [
+        56,
+        68
+      ],
+      "alphaBBox": [
+        21,
+        20,
+        34,
+        42
+      ],
+      "anchor": {
+        "x": 0.4911,
+        "y": 0.2941
+      },
+      "rotation": 0,
+      "bodyAngle": 1.5707963268,
+      "bodyLength": 13,
+      "sourceSize": {
+        "width": 13,
+        "height": 22
+      },
+      "textureSize": {
+        "width": 56,
+        "height": 68
+      }
+    },
+    "free": {
+      "size": [
+        56,
+        68
+      ],
+      "alphaBBox": [
+        21,
+        22,
+        34,
+        40
+      ],
+      "anchor": {
+        "x": 0.4911,
+        "y": 0.4559
+      },
+      "rotation": 0,
+      "bodyAngle": 0,
+      "bodyLength": 8,
+      "sourceSize": {
+        "width": 13,
+        "height": 18
+      },
+      "textureSize": {
+        "width": 56,
+        "height": 68
+      }
+    }
+  }
+}

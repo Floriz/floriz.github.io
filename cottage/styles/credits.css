@@ -1,0 +1,45 @@
+.credits-link {
+  position: fixed;
+  right: calc(12px + env(safe-area-inset-right, 0px));
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  z-index: 7;
+  width: 72px;
+  height: 28px;
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: rgba(248, 239, 216, 0.5);
+  font: 12px/20px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  text-shadow: none;
+  cursor: pointer;
+}
+.credits-link:hover,
+.credits-link:focus-visible { color: #fff1d4; }
+.credits-link:focus-visible { outline: 4px solid currentColor; outline-offset: 0; }
+@media (max-width: 960px), (pointer: coarse) {
+  .credits-link { height: 44px; padding: 12px 8px; }
+}
+.credits-dialog { overflow: hidden; }
+.credits-dialog[open] { display: flex; flex-direction: column; }
+.credits-dialog .email-dialog-heading { flex: 0 0 auto; }
+.credits-content {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: #926c42 transparent;
+  font-size: 13px;
+  line-height: 20px;
+}
+.credits-content section + section { margin-top: 24px; }
+.credits-content h3 { margin: 0 0 8px; color: #392318; font-size: 14px; line-height: 20px; }
+.credits-content p { margin: 0; }
+.credits-content ul { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.credits-content a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.credits-content a:hover { color: #713612; }
+.credits-content a:focus-visible { outline: none; text-decoration-thickness: 4px; }
+.credits-content .credits-detail { display: block; font-size: 12px; line-height: 20px; }
+.credits-content .credits-note { margin-top: 12px; font-size: 12px; line-height: 20px; }
+.credits-content ::selection { background: #b98049; color: #392318; }

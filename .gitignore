@@ -1,0 +1,17 @@
+.DS_Store
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+node_modules/
+__pycache__/
+.playwright-mcp/
+context.md
+.agents/
+.codex/
+**/assets/source/
+**/assets/arcade-rebuild/v*/
+inspiration/
+art-direction/

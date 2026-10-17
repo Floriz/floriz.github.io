@@ -1,0 +1,47 @@
+.static-lake {
+  --shore: 58%;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #655799;
+  pointer-events: none;
+}
+.static-lake > div { position: absolute; image-rendering: pixelated; background-repeat: repeat-x; }
+.static-sky,
+.static-water,
+.static-trees { left: 0; width: 100%; height: 940px; background-size: 3344px 940px; background-position: center top; }
+.static-sky { top: calc(var(--shore) - 472px); background-image: url('../assets/arcade-rebuild/current/scene/sky_base/active/peach_afterglow_rightlit_01.png?v=rebuild-v073-ufo-water-fishing-completion'); }
+.static-water { top: calc(var(--shore) - 472px); background-image: url('../assets/arcade-rebuild/current/scene/lake_base/active/deep_blue_02.png?v=rebuild-v073-ufo-water-fishing-completion'); }
+.static-trees { top: calc(var(--shore) - 472px); background-image: url('../assets/arcade-rebuild/current/scene/back_treeline/active/broken_cove_pines_01.png?v=rebuild-v073-ufo-water-fishing-completion'); }
+.static-bank { left: 0; bottom: 0; width: max(0px, calc(48% - 780px)); height: 120px; background: #35332d url('../assets/arcade-rebuild/current/scene/dock_bank/active/dusk_grass.png?v=rebuild-v073-ufo-water-fishing-completion&art=grass-v078') 0 0 / 512px 256px repeat; }
+.static-dock { left: calc(48% - 780px); bottom: -100px; width: 1672px; height: 940px; background: url('../assets/arcade-rebuild/current/scene/foreground_dock_shore/active/dark_cedar_bank_05.png?v=rebuild-v073-ufo-water-fishing-completion') 0 0 / 1672px 940px no-repeat; }
+.static-floris { left: calc(48% - 48px); bottom: 112px; width: 100px; height: 220px; background: url('../assets/arcade-rebuild/current/characters/floris/active/idle.png?v=rebuild-v073-ufo-water-fishing-completion&art=floris-cap-v107') 0 0 / 100px 220px no-repeat; }
+.static-dog { left: calc(48% - 164px); bottom: 120px; width: 88px; height: 68px; background: url('../assets/arcade-rebuild/current/characters/dog/active/idle.png?v=rebuild-v073-ufo-water-fishing-completion') 0 0 / 88px 68px no-repeat; }
+.fallback-note { display: none; position: fixed; z-index: 5; bottom: 48px; left: 50%; transform: translateX(-50%); width: min(440px, calc(100% - 32px)); padding: 8px 16px; border: 4px solid #926c42; background: #d5ae79 url('../assets/arcade-rebuild/current/ui/contact/wood.png?v=email-v092') 0 0 / 416px 160px; image-rendering: pixelated; color: #392318; box-shadow: inset 4px 4px #efd19b, 4px 4px #34221966; font-size: 12px; line-height: 20px; text-align: center; }
+.fallback-note p { margin: 0; }
+.fallback-note button { min-height: 44px; padding: 4px 12px; margin-top: 4px; color: inherit; font: inherit; border: 0; background: transparent; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+[data-scene-state='fallback'] .fallback-note { display: block; }
+html:not([data-scene-state='ready']) #rebuild-stage { visibility: hidden; }
+[data-scene-state='ready'] .static-lake { display: none; }
+.site-identity-easter-egg:disabled { cursor: default; pointer-events: none; }
+.site-identity-email:disabled,
+.site-identity-email:disabled + .site-identity-email-separator,
+.credits-link:disabled,
+.rebuild-audio-toggle:disabled { display: none; }
+@media (max-width: 640px) {
+  html:not(.has-studio) .site-identity[data-identity-variant='editorial'] .site-identity-lockup { top: calc(64px + env(safe-area-inset-top, 0px)); }
+}
+@media (min-width: 641px) and (max-width: 1100px) {
+  html:not(.has-studio) .site-identity[data-identity-variant='editorial'] .site-identity-lockup { top: calc(max(64px, 8vh) + env(safe-area-inset-top, 0px)); }
+}
+@media (max-height: 500px) and (max-width: 960px) and (orientation: landscape) {
+  html:not(.has-studio) .site-identity[data-identity-variant='editorial'] .site-identity-lockup { top: calc(32px + env(safe-area-inset-top, 0px)); }
+  .static-lake { --shore: 44%; }
+  .static-dock { bottom: -188px; }
+  .static-floris { bottom: 24px; }
+  .static-dog { bottom: 32px; }
+  .static-bank { height: 32px; }
+  .fallback-note { left: auto; right: 16px; bottom: 56px; width: 248px; transform: none; }
+}
+
+.static-floris svg { position: absolute; left: -24px; top: -8px; width: 168px; height: 168px; overflow: visible; }

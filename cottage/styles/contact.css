@@ -1,0 +1,96 @@
+.email-dialog {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --wood-ink: #51311d;
+  --wood-hover: #a6521c;
+  position: fixed;
+  width: min(420px, calc(100vw - 32px));
+  max-width: none;
+  box-sizing: border-box;
+  inset: auto;
+  margin: 0;
+  padding: 24px;
+  border: 4px solid #926c42;
+  border-radius: 0;
+  background: #d5ae79 url("../assets/arcade-rebuild/current/ui/contact/wood.png?v=email-v092") 0 0 / 416px 160px repeat;
+  image-rendering: pixelated;
+  color: var(--wood-ink);
+  box-shadow: inset 4px 4px #efd19b, inset -4px -4px #b48651, inset 0 0 0 8px #d5ae79, 4px 8px #34221988;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  text-align: left;
+  isolation: isolate;
+}
+.email-dialog::backdrop { background: #231b1e60; }
+
+
+.email-dialog::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 12px;
+  pointer-events: none;
+  background:
+    linear-gradient(#efd09c 0 0) left top / 4px 4px,
+    linear-gradient(#efd09c 0 0) right top / 4px 4px,
+    linear-gradient(#ad8252 0 0) left bottom / 4px 4px,
+    linear-gradient(#ad8252 0 0) right bottom / 4px 4px;
+  background-repeat: no-repeat;
+}
+.email-dialog-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 44px; margin-bottom: 16px; }
+.email-dialog .email-dialog-title { margin: 0; color: #392318; font: 700 21px/28px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: -1px; text-shadow: none; }
+.email-dialog button {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.email-dialog .email-dialog-close { width: 44px; height: 44px; flex-basis: 44px; }
+.email-dialog .email-dialog-copy { width: 44px; flex-basis: 44px; }
+.email-dialog button:hover { color: var(--wood-hover); background: transparent; }
+.email-dialog .email-dialog-close:hover { color: #fff1ca; }
+.email-dialog button:focus-visible::after { content: ""; position: absolute; left: 12px; bottom: 4px; width: 24px; height: 4px; background: currentColor; }
+.email-dialog .email-dialog-close:focus-visible::after { left: 8px; width: 28px; }
+.email-dialog .email-dialog-copy:focus-visible::after { left: 8px; }
+.email-dialog svg { display: block; width: 24px; height: 24px; fill: currentColor; shape-rendering: crispEdges; }
+.email-dialog .email-dialog-close svg { width: 28px; height: 28px; }
+.email-dialog-address {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.email-dialog-value {
+  min-width: 0;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  outline: none;
+  color: inherit;
+  user-select: text;
+  font: 20px/32px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: -0.5px;
+}
+.email-dialog-value::selection { background: #b98049; color: #392318; }
+.email-dialog-status { margin: 0; color: var(--wood-ink); font-size: 12px; line-height: 16px; }
+.email-dialog-status:not(.is-error) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.email-dialog-status.is-error { margin-top: 12px; }
+.email-dialog .email-copied-icon { display: none; }
+.email-dialog .is-copied .email-copy-icon { display: none; }
+.email-dialog .is-copied .email-copied-icon { display: block; }
+.email-dialog .is-copied:hover .email-copied-icon { color: var(--wood-hover); }
+
+@media (max-width: 420px) {
+  .email-dialog { padding-left: 12px; padding-right: 12px; }
+  .email-dialog .email-dialog-title { font-size: 18px; }
+}
+@media (max-width: 380px) {
+  .email-dialog { padding-left: 8px; padding-right: 8px; }
+  .email-dialog-value { font-size: 16px; line-height: 24px; }
+}
