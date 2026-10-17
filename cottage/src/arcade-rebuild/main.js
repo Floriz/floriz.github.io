@@ -2,7 +2,7 @@ import { createAudioController } from './audio.js?v=build-v100';
 import { createIdentityController } from './identity.js?v=build-v100';
 import { createRenderer } from './renderer.js?v=build-v100';
 import { isDevelopment } from './mode.js?v=build-v100';
-import { createWorld } from './world.js?v=build-v100';
+import { createWorld } from './world.js?v=bobber-bite-v108';
 
 const canvas = document.getElementById('rebuild-stage');
 const development = isDevelopment(location);

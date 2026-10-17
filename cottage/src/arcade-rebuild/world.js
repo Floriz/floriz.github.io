@@ -479,6 +479,23 @@ function drawBobber(g, x, y) {
   rect(g, px - 1, py + 2, 3, 1, COLORS.bobberDark, 1);
 }
 
+function bobberRigFor(phase, hookTarget, dip, outcome) {
+  const visible = ['cast', 'settle', 'wait', 'tease', 'bite'].includes(phase.name)
+    || (phase.name === 'reel' && outcomeReelsEmpty(outcome));
+  const bobber = visible
+    ? { x: Math.round(hookTarget.x), y: Math.round(hookTarget.y + dip) }
+    : null;
+  return {
+    bobber,
+    lineEnd: bobber ? { x: bobber.x, y: bobber.y - 3 } : hookTarget,
+  };
+}
+
+function drawBobberBiteSplash(g, phase, hookTarget, outcome) {
+  if (phase.name !== 'bite' || outcome.catchType === 'weeds') return;
+  drawSplash(g, Math.round(hookTarget.x), Math.round(hookTarget.y), (phase.p * 3) % 1, 0.4);
+}
+
 function phaseAt(elapsed, timeline = FISHING_TIMELINE) {
   let cursor = 0;
   for (const [name, duration] of Object.entries(timeline)) {
@@ -3285,6 +3302,7 @@ export async function createWorld(root, renderer, audio, { development = false }
       hand,
       rodTip,
       hookTarget,
+      ...bobberRigFor(phase, hookTarget, bobberDipFor(phase, now), fishing.outcome),
       retrieveTarget,
       heldMouth,
       returnTarget: retrieveTarget,
@@ -3526,6 +3544,7 @@ export async function createWorld(root, renderer, audio, { development = false }
     const rodTip = rodTipFor(hand, phase, rigState);
     const anchors = fishingAnchors(layoutNow, phase, now);
     const hookTarget = anchors.hookTarget;
+    const lineEnd = anchors.lineEnd;
     const returnTarget = anchors.returnTarget;
     const fishTexture = fishTextureFor(textures, activeCatchVariant(), phase);
     const fishDisplay = fishDisplayFor(layoutNow, phase, now, fishTexture);
@@ -3540,28 +3559,19 @@ export async function createWorld(root, renderer, audio, { development = false }
     if (lineAttached) {
       const taut = lineIsTautForPhase(phase);
       if (taut) {
-        line(g, rodTip.x, rodTip.y, hookTarget.x, hookTarget.y, COLORS.line, 0.9);
+        line(g, rodTip.x, rodTip.y, lineEnd.x, lineEnd.y, COLORS.line, 0.9);
       } else {
         const slack = phase.name === 'reel'
           ? (rigState.lineSlack * 0.66) * (1 - phase.p)
           : rigState.lineSlack;
         const control = {
-          x: (rodTip.x + hookTarget.x) / 2,
-          y: Math.max(rodTip.y, hookTarget.y) + slack,
+          x: (rodTip.x + lineEnd.x) / 2,
+          y: Math.max(rodTip.y, lineEnd.y) + slack,
         };
-        curve(g, rodTip, control, hookTarget, COLORS.line, 0.9);
+        curve(g, rodTip, control, lineEnd, COLORS.line, 0.9);
       }
-      if (
-        phase.name === 'cast'
-        || phase.name === 'settle'
-        || phase.name === 'wait'
-        || phase.name === 'tease'
-        || phase.name === 'bite'
-        || (phase.name === 'reel' && outcomeReelsEmpty(fishing.outcome))
-      ) {
-        const dip = bobberDipFor(phase, now);
-        drawBobber(g, hookTarget.x, hookTarget.y + dip);
-      }
+      if (anchors.bobber) drawBobber(g, anchors.bobber.x, anchors.bobber.y);
+      drawBobberBiteSplash(g, phase, hookTarget, fishing.outcome);
     }
     drawReelContactSplash(g, reelContactSplash, now);
 
