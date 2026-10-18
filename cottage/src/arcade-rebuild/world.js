@@ -358,7 +358,28 @@ function makeLayerState(layer) {
   };
 }
 
-function responsiveLayout(nativeW, nativeH, layoutState) {
+function responsiveLayout(nativeW, nativeH, layoutState, safeArea = {}) {
+  const safe = Object.fromEntries(['top', 'right', 'bottom', 'left'].map((edge) => [edge, Math.max(0, Math.ceil(Number(safeArea[edge]) || 0))]));
+  const compact = nativeW < 130 || nativeH < 130;
+  if (compact) {
+    const left = safe.left;
+    const right = nativeW - safe.right;
+    const bottom = nativeH - safe.bottom;
+    const dockSurfaceY = Math.max(safe.top + 70, bottom - Math.min(22, Math.round(nativeH * 0.12)));
+    const avatarX = Math.round(left + Math.min(60, (right - left) * 0.42));
+    const dockTipX = avatarX + 5;
+    const waterY = Math.min(dockSurfaceY - 36, Math.max(safe.top + 18, Math.round(nativeH * 0.43)));
+    return {
+      nativeW, nativeH, compact, safeArea: safe, waterY,
+      dockY: dockSurfaceY, dockSurfaceY,
+      dockBaselinePercentFromBottom: Number(layoutState.dockBaselinePercentFromBottom),
+      avatar: { x: avatarX, y: dockSurfaceY },
+      dog: { x: Math.max(left + 11, avatarX - 28), y: dockSurfaceY },
+      dockTipX, dockPlateX: dockTipX - 237,
+      castTarget: { x: right - 25, y: dockSurfaceY - 25 },
+      dockStart: left, dockEnd: dockTipX,
+    };
+  }
   const waterY = clamp(112 + Math.round((nativeH - 193) * 0.18), 96, nativeH - 72);
   const baselinePercent = clamp(Number(layoutState.dockBaselinePercentFromBottom), 5, 60);
   const dockSurfaceY = clamp(Math.round(nativeH * (1 - baselinePercent / 100)), waterY + 24, nativeH - 8);
@@ -644,6 +665,7 @@ function pointOnArc(start, control, end, p) {
 }
 
 function returnPointFor(layout, hand) {
+  if (layout.compact) return { ...layout.castTarget };
   return {
     x: clamp(hand.x + 54, hand.x + 28, layout.nativeW - 12),
     y: foregroundWaterY(layout),
@@ -1055,14 +1077,16 @@ export async function createWorld(root, renderer, audio, { development = false }
   };
   const flags = { paused: false, grid: false, bounds: false, forceShimmer: false, sampleChat: false };
   let lastNow = 0;
+  let fishingTargetCache = null;
+  let fishingWaterMaskCache = null;
 
   function currentLayout() {
-    const base = responsiveLayout(renderer.nativeViewW, renderer.nativeViewH, layoutState);
+    const base = responsiveLayout(renderer.nativeViewW, renderer.nativeViewH, layoutState, renderer.safeArea);
     const foreground = layerStates.foreground_dock_shore;
-    const dockGroupOffsetY = foreground
+    const dockGroupOffsetY = foreground && !base.compact
       ? Math.round(Number(foreground.y || 0) + base.nativeH * Number(foreground.screenY || 0) / 100)
       : 0;
-    const maxDockSurfaceY = base.nativeW < 130 ? base.nativeH - 30 : base.nativeH - 6;
+    const maxDockSurfaceY = base.compact ? base.nativeH - base.safeArea.bottom - 4 : base.nativeH - 6;
     const dockSurfaceY = clamp(base.dockSurfaceY + dockGroupOffsetY, base.waterY + 24, maxDockSurfaceY);
     const layoutNow = {
       ...base,
@@ -1072,9 +1096,14 @@ export async function createWorld(root, renderer, audio, { development = false }
       dockSurfaceY,
       avatar: { ...base.avatar, y: dockSurfaceY },
       dog: { ...base.dog, y: dockSurfaceY },
-      castTarget: { ...base.castTarget, y: foregroundWaterY({ ...base, dockSurfaceY }) + 2 },
+      castTarget: base.compact ? base.castTarget : { ...base.castTarget, y: foregroundWaterY({ ...base, dockSurfaceY }) + 2 },
     };
-    layoutNow.castTarget = resolveFishingTarget(layoutNow, lastNow || performance.now());
+    const key = JSON.stringify([layoutNow, WATER_OCCLUDING_LAYERS.map((name) => layerStates[name])]);
+    if (fishingTargetCache?.key !== key) {
+      fishingTargetCache = { key, target: resolveFishingTarget(layoutNow, lastNow || performance.now()) };
+    }
+    layoutNow.fishingWaterAvailable = Boolean(fishingTargetCache.target);
+    if (fishingTargetCache.target) layoutNow.castTarget = { ...fishingTargetCache.target };
     return layoutNow;
   }
 
@@ -1315,7 +1344,7 @@ export async function createWorld(root, renderer, audio, { development = false }
 
   function heronBasePoint(layoutNow) {
     const x = clamp(layoutNow.nativeW - 82, Math.round(layoutNow.avatar.x + 68), layoutNow.nativeW - 18);
-    return { x, y: Math.round(layoutNow.waterY + 43) };
+    return { x, y: Math.round(layoutNow.waterY + (layoutNow.compact ? -11 : 43)) };
   }
 
   function heronRuntimeState(layoutNow, now) {
@@ -1398,7 +1427,7 @@ export async function createWorld(root, renderer, audio, { development = false }
 
   function layerBaseX(name, state, layoutNow) {
     if (name === 'foreground_dock_shore') {
-      return layoutNow.avatar.x - foregroundDockSurface(state).avatarAnchorX;
+      return layoutNow.compact ? layoutNow.dockPlateX : layoutNow.avatar.x - foregroundDockSurface(state).avatarAnchorX;
     }
     if (
       state.compositionAnchorX !== null
@@ -1421,7 +1450,8 @@ export async function createWorld(root, renderer, audio, { development = false }
       const waterRise = name === 'lake_base' || name === 'lake_shimmer'
         ? normalizeFarWaterRise(waterState.farWaterRiseScreenPx) / 4
         : 0;
-      return layoutNow.waterY - WATER_ANCHOR_Y - waterRise;
+      const compactRise = layoutNow.compact ? (name === 'right_land_perch' ? 54 : name === 'far_shore' ? 16 : 0) : 0;
+      return layoutNow.waterY - WATER_ANCHOR_Y - waterRise - compactRise;
     }
     return 0;
   }
@@ -2832,17 +2862,17 @@ export async function createWorld(root, renderer, audio, { development = false }
 
   function drawDockLandConnection(g, state, layoutNow) {
     const offset = layerPosition('foreground_dock_shore', state, layoutNow);
-    dockBankFill.visible = offset.x > 0;
+    dockBankFill.visible = layoutNow.compact || offset.x > 0;
     if (!dockBankFill.visible) return;
-    const endX = offset.x + 32;
+    const endX = layoutNow.compact ? layoutNow.safeArea.left + 10 : offset.x + 32;
     const surfaceY = offset.y + foregroundDockSurface(state).y;
-    const rise = 34 * clamp(offset.x / 24, 0, 1);
+    const rise = layoutNow.compact ? 0 : 34 * clamp(offset.x / 24, 0, 1);
     dockBankFill.width = endX;
     dockBankFill.height = layoutNow.nativeH;
     dockBankFill.tilePosition.set(offset.x, surfaceY);
     const bankTop = (x) => {
       const p = clamp((x - endX + 72) / 72, 0, 1);
-      return Math.round(surfaceY + 9 - rise * (1 - p * p * (3 - 2 * p)));
+      return Math.round(surfaceY + (layoutNow.compact ? -1 : 9) - rise * (1 - p * p * (3 - 2 * p)));
     };
     for (let x = 0; x < endX; x += 2) {
       const width = Math.min(2, endX - x);
@@ -3023,12 +3053,40 @@ export async function createWorld(root, renderer, audio, { development = false }
       : { surface: 'water', occluder: null };
   }
 
+  function fishingWaterMask(layoutNow, now) {
+    const key = JSON.stringify([layoutNow, WATER_OCCLUDING_LAYERS.map((name) => layerStates[name])]);
+    if (fishingWaterMaskCache?.key === key) return fishingWaterMaskCache;
+    const width = layoutNow.nativeW;
+    const height = layoutNow.nativeH;
+    const stride = width + 1;
+    const sums = new Uint32Array(stride * (height + 1));
+    for (let y = 0; y < height; y += 1) {
+      let row = 0;
+      for (let x = 0; x < width; x += 1) {
+        if (pointerSurfaceAt({ x, y }, layoutNow, now).surface !== 'water') row += 1;
+        sums[(y + 1) * stride + x + 1] = sums[y * stride + x + 1] + row;
+      }
+    }
+    fishingWaterMaskCache = { key, sums, stride };
+    return fishingWaterMaskCache;
+  }
+
   function bobberFootprintIsOpenWater(point, layoutNow, now) {
+    if (layoutNow.compact) {
+      // Full release splash (16px radius), bite dip and 8 native pixels of clearance.
+      const left = Math.round(point.x) - 24;
+      const right = Math.round(point.x) + 25;
+      const top = Math.round(point.y) - 20;
+      const bottom = Math.round(point.y) + 13;
+      const safe = layoutNow.safeArea;
+      if (left < safe.left || right > layoutNow.nativeW - safe.right || top < safe.top || bottom > layoutNow.nativeH - safe.bottom) return false;
+      const { sums, stride } = fishingWaterMask(layoutNow, now);
+      return sums[bottom * stride + right] - sums[top * stride + right]
+        - sums[bottom * stride + left] + sums[top * stride + left] === 0;
+    }
     for (const y of [-4, -2, 0, 2]) {
       for (const x of [-2, 0, 2]) {
-        if (pointerSurfaceAt({ x: point.x + x, y: point.y + y }, layoutNow, now).surface !== 'water') {
-          return false;
-        }
+        if (pointerSurfaceAt({ x: point.x + x, y: point.y + y }, layoutNow, now).surface !== 'water') return false;
       }
     }
     return true;
@@ -3036,16 +3094,19 @@ export async function createWorld(root, renderer, audio, { development = false }
 
   function resolveFishingTarget(layoutNow, now) {
     const preferred = layoutNow.castTarget;
-    const minX = Math.max(14, Math.round(layoutNow.avatar.x + (layoutNow.nativeW < 130 ? 10 : 24)));
-    const maxLeftShift = Math.max(0, preferred.x - minX);
-    for (const yOffset of [0, 2, -2, 4, -4, 6]) {
-      const y = clamp(preferred.y + yOffset, layoutNow.waterY + 10, layoutNow.dockSurfaceY - 4);
-      for (let shift = 0; shift <= maxLeftShift; shift += 2) {
-        const candidate = { x: preferred.x - shift, y };
-        if (bobberFootprintIsOpenWater(candidate, layoutNow, now)) return candidate;
+    if (bobberFootprintIsOpenWater(preferred, layoutNow, now)) return preferred;
+    const minX = layoutNow.compact ? Math.max(24, layoutNow.avatar.x + 16) : Math.max(14, Math.round(layoutNow.avatar.x + 24));
+    const maxX = layoutNow.nativeW - (layoutNow.compact ? 25 + layoutNow.safeArea.right : 14);
+    const minY = layoutNow.waterY + (layoutNow.compact ? 20 : 10);
+    const maxY = layoutNow.compact ? layoutNow.nativeH - layoutNow.safeArea.bottom - 13 : layoutNow.dockSurfaceY - 4;
+    const candidates = [];
+    for (let y = minY; y <= maxY; y += 1) {
+      for (let x = minX; x <= maxX; x += 1) {
+        candidates.push({ x, y });
       }
     }
-    return preferred;
+    candidates.sort((a, b) => Math.hypot(a.x - preferred.x, a.y - preferred.y) - Math.hypot(b.x - preferred.x, b.y - preferred.y));
+    return candidates.find((candidate) => bobberFootprintIsOpenWater(candidate, layoutNow, now)) || null;
   }
 
   function drawWaterPlops(g, now, layoutNow) {
@@ -3308,6 +3369,10 @@ export async function createWorld(root, renderer, audio, { development = false }
       fishDisplayState.fightWiggle,
       reelMouth,
     );
+    if (layoutNow.compact && phase.name === 'reel' && outcomeHasCatch(fishing.outcome) && phase.p >= 0.62) {
+      const cleared = dockClearedMouth(layoutNow, hookTarget, variant, fishStateForPhase(phase), fishDisplayState.reelScale);
+      hookTarget.y = lerp(hookTarget.y, cleared.y, clamp((phase.p - 0.62) / 0.1, 0, 1));
+    }
     const heldMouth = dockClearedMouth(
       layoutNow,
       gravityHeldMouth,
@@ -3733,7 +3798,7 @@ export async function createWorld(root, renderer, audio, { development = false }
   }
 
   function startFishing(now = performance.now(), requestedOutcomeKey = null, requestedSpeciesKey = null, requestedSizeKey = null) {
-    if (fishing.active) return false;
+    if (fishing.active || !currentLayout().fishingWaterAvailable) return false;
     fishing.outcome = requestedOutcomeKey
       ? outcomeByKey(requestedOutcomeKey)
       : chooseFishingOutcome(lastOutcomeKey);
@@ -3808,8 +3873,8 @@ export async function createWorld(root, renderer, audio, { development = false }
     const ax = avatarPoint.x;
     const ay = avatarPoint.y;
     const hitAvatar = (
-      worldPoint.x >= ax - 16
-      && worldPoint.x <= ax + 18
+      worldPoint.x >= ax - (layoutNow.compact ? 12 : 16)
+      && worldPoint.x <= ax + (layoutNow.compact ? 4 : 18)
       && worldPoint.y >= ay - 58
       && worldPoint.y <= ay + 5
     );
@@ -4167,6 +4232,10 @@ export async function createWorld(root, renderer, audio, { development = false }
     return {
       nativeView: { width: layoutNow.nativeW, height: layoutNow.nativeH },
       waterY: layoutNow.waterY,
+      compact: Boolean(layoutNow.compact),
+      safeArea: layoutNow.safeArea || null,
+      fishingWaterAvailable: layoutNow.fishingWaterAvailable,
+      dockTipX: layoutNow.dockTipX ?? null,
       baseDockSurfaceY: layoutNow.baseDockSurfaceY,
       dockGroupOffsetY: layoutNow.dockGroupOffsetY,
       dockSurfaceY: layoutNow.dockSurfaceY,

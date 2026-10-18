@@ -2,6 +2,8 @@ const MANIFEST_URL = './assets/arcade-rebuild/current/audio/manifest.json';
 const CACHE_TOKEN = 'rebuild-v112-moose-raspberry';
 const MUTE_STORAGE_KEY = 'arcade-rebuild-audio-muted';
 const MAX_PENDING_AGE_MS = 700;
+const RESUME_TIMEOUT_MS = 1500;
+const PREWARM_CUES = ['water_plop', 'dog_click_woof', 'rod_cast'];
 const PRELOAD_CUE_ORDER = [
   'water_plop',
   'dog_click_woof',
@@ -54,20 +56,46 @@ export function createAudioController() {
   let manifest = null;
   let preloadPromise = null;
   let preloadFailed = false;
-  let initialSuspendPromise = null;
   let unlocked = false;
+  let pageVisible = true;
+  let needsGesture = true;
+  let resumeAttempt = null;
+  let lastResumeError = null;
+  let manifestPromise = null;
+  let prewarmPromise = null;
   let muted = storedMuted();
   let masterGain = 0.72;
   let status = 'idle';
   let warningSent = false;
   let eventId = 0;
   const buffers = new Map();
+  const assetBytes = new Map();
+  const decoding = new Map();
   const pending = [];
   const voices = new Set();
   const lastPlayedAt = new Map();
   const lastVariant = new Map();
   const eventLog = [];
   const errors = [];
+
+  function notify() {
+    window.dispatchEvent(new CustomEvent('arcade-rebuild-audio-change'));
+  }
+
+  function isRunning() {
+    return Boolean(context && context.state === 'running' && unlocked && !needsGesture && pageVisible);
+  }
+
+  function playbackState() {
+    if (muted) return 'muted';
+    if (!pageVisible) return 'background';
+    if (status === 'unavailable') return 'unavailable';
+    if (lastResumeError) return 'blocked';
+    if (context?.state === 'interrupted') return 'interrupted';
+    if (context && (!unlocked || needsGesture || context.state !== 'running')) return 'suspended';
+    if (isRunning() && buffers.size) return 'ready';
+    return status === 'loading' ? 'loading' : 'idle';
+  }
 
   function warnOnce(message, error = null) {
     errors.push(error ? `${message}: ${error.message || error}` : message);
@@ -78,20 +106,82 @@ export function createAudioController() {
   }
 
   function ensureContext() {
+    if (context?.state === 'closed') {
+      stopAllVoices();
+      masterNode?.disconnect?.();
+      context = null;
+      unlocked = false;
+      needsGesture = true;
+    }
     if (context) return context;
     const AudioContextClass = window.AudioContext || window.webkitAudioContext;
     if (!AudioContextClass) {
       status = 'unavailable';
+      notify();
       return null;
     }
     context = new AudioContextClass();
     masterNode = context.createGain();
     masterNode.gain.value = muted ? 0 : masterGain;
     masterNode.connect(context.destination);
-    if (!unlocked && context.state === 'running') {
-      initialSuspendPromise = context.suspend().catch(() => null);
-    }
+    const createdContext = context;
+    context.addEventListener?.('statechange', () => {
+      if (context !== createdContext) return;
+      if (context.state !== 'running') {
+        unlocked = false;
+        needsGesture = true;
+      }
+      notify();
+    });
     return context;
+  }
+
+  async function loadManifest() {
+    if (manifest) return manifest;
+    if (!manifestPromise) {
+      manifestPromise = (async () => {
+        const response = await fetch(`${MANIFEST_URL}?v=${CACHE_TOKEN}`);
+        if (!response.ok) throw new Error(`manifest ${response.status}`);
+        manifest = await response.json();
+        return manifest;
+      })().catch((error) => {
+        manifestPromise = null;
+        throw error;
+      });
+    }
+    return manifestPromise;
+  }
+
+  function loadBytes(entry) {
+    const key = `${entry.cue}:${entry.variant}`;
+    if (!assetBytes.has(key)) {
+      const request = (async () => {
+        const response = await fetch(`${entry.path}?v=${CACHE_TOKEN}`);
+        if (!response.ok) throw new Error(`${entry.path} ${response.status}`);
+        return response.arrayBuffer();
+      })().catch((error) => {
+        assetBytes.delete(key);
+        throw error;
+      });
+      assetBytes.set(key, request);
+    }
+    return assetBytes.get(key);
+  }
+
+  function prewarm() {
+    if (muted || !pageVisible) return Promise.resolve(null);
+    if (prewarmPromise) return prewarmPromise;
+    prewarmPromise = (async () => {
+      await loadManifest();
+      const entries = PREWARM_CUES.map((cue) => manifest.entries.find((entry) => entry.cue === cue)).filter(Boolean);
+      await Promise.all(entries.map(loadBytes));
+      notify();
+      return manifest;
+    })().catch(() => {
+      prewarmPromise = null;
+      return null;
+    });
+    return prewarmPromise;
   }
 
   async function preload(retry = false) {
@@ -103,23 +193,28 @@ export function createAudioController() {
     status = 'loading';
     preloadPromise = (async () => {
       try {
-        if (!manifest) {
-          const response = await fetch(`${MANIFEST_URL}?v=${CACHE_TOKEN}`);
-          if (!response.ok) throw new Error(`manifest ${response.status}`);
-          manifest = await response.json();
-        }
+        await loadManifest();
         const loadEntry = async (entry) => {
-          if (buffers.has(`${entry.cue}:${entry.variant}`)) return;
-          try {
-            const assetResponse = await fetch(`${entry.path}?v=${CACHE_TOKEN}`);
-            if (!assetResponse.ok) throw new Error(`${entry.path} ${assetResponse.status}`);
-            const buffer = await audioContext.decodeAudioData(await assetResponse.arrayBuffer());
-            buffers.set(`${entry.cue}:${entry.variant}`, buffer);
-            if (unlocked) drainPending();
-          } catch (error) {
-            failed = true;
-            errors.push(`${entry.cue}:${entry.variant}: ${error.message || error}`);
-          }
+          const key = `${entry.cue}:${entry.variant}`;
+          if (buffers.has(key)) return;
+          if (decoding.has(key)) return decoding.get(key);
+          const operation = (async () => {
+            try {
+              const bytes = await loadBytes(entry);
+              // Decoding can detach its input; keep warmed bytes reusable after interruptions.
+              const buffer = await audioContext.decodeAudioData(bytes.slice(0));
+              buffers.set(key, buffer);
+              if (isRunning()) drainPending();
+              notify();
+            } catch (error) {
+              failed = true;
+              errors.push(`${entry.cue}:${entry.variant}: ${error.message || error}`);
+            } finally {
+              decoding.delete(key);
+            }
+          })();
+          decoding.set(key, operation);
+          return operation;
         };
         const primaryEntries = PRELOAD_CUE_ORDER
           .map((cue) => manifest.entries.find((entry) => entry.cue === cue))
@@ -138,6 +233,7 @@ export function createAudioController() {
       return manifest;
     })().then((result) => {
       preloadFailed = failed;
+      notify();
       return result;
     });
     return preloadPromise;
@@ -195,7 +291,7 @@ export function createAudioController() {
     const setting = CUE_SETTINGS[request.cue];
     const entry = request.entry || chooseEntry(request.cue);
     const buffer = entry ? buffers.get(`${entry.cue}:${entry.variant}`) : null;
-    if (!audioContext || !masterNode || !entry || !buffer) {
+    if (!audioContext || !masterNode || !entry || !buffer || !isRunning()) {
       recordEvent({
         cue: request.cue,
         state: 'missing',
@@ -312,6 +408,7 @@ export function createAudioController() {
   function drainPending() {
     const now = performance.now();
     expirePending(now);
+    if (muted || !isRunning()) return;
     const queued = pending.splice(0);
     for (const request of queued) {
       if (now - request.queuedAt > MAX_PENDING_AGE_MS) {
@@ -332,26 +429,58 @@ export function createAudioController() {
     }
   }
 
-  async function unlock() {
-    if (muted) return false;
+  function unlock() {
+    if (muted || !pageVisible) return Promise.resolve(false);
+    let audioContext;
+    let resumed;
     try {
-      const audioContext = ensureContext();
-      if (!audioContext) return false;
-      preload(true);
-      if (initialSuspendPromise) await initialSuspendPromise;
-      if (audioContext.state !== 'running') await audioContext.resume();
-      unlocked = audioContext.state === 'running';
-      await preloadPromise;
-      if (unlocked) drainPending();
-      return unlocked;
+      audioContext = ensureContext();
+      if (!audioContext) return Promise.resolve(false);
+      if (resumeAttempt?.context === audioContext) return resumeAttempt.promise;
+      // Resume must run on the trusted handler's stack, before fetching or awaiting anything.
+      resumed = isRunning() ? Promise.resolve() : audioContext.resume();
     } catch (error) {
-      warnOnce('Audio could not be unlocked; interactions remain visual.', error);
-      return false;
+      lastResumeError = error.message || String(error);
+      needsGesture = true;
+      unlocked = false;
+      notify();
+      return Promise.resolve(false);
     }
+    lastResumeError = null;
+    const attempt = { context: audioContext, promise: null };
+    resumeAttempt = attempt;
+    const activation = new Promise((resolve) => {
+      let settled = false;
+      let timer;
+      const finish = (error = null) => {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timer);
+        if (resumeAttempt !== attempt) return resolve(false);
+        const running = !error && context === audioContext && audioContext.state === 'running';
+        unlocked = Boolean(running && pageVisible && !muted);
+        needsGesture = !unlocked;
+        lastResumeError = error ? error.message || String(error) : running ? null : 'Audio context did not start';
+        resumeAttempt = null;
+        if (isRunning()) drainPending();
+        notify();
+        resolve(unlocked);
+      };
+      timer = setTimeout(() => finish(new Error('Audio activation timed out')), RESUME_TIMEOUT_MS);
+      Promise.resolve(resumed).then(() => finish(), finish);
+    });
+    preload(true);
+    attempt.promise = activation.then(async (ready) => {
+      if (!ready) return false;
+      await preloadPromise;
+      if (isRunning()) drainPending();
+      return isRunning() && !muted;
+    });
+    return attempt.promise;
   }
 
   function play(cue, options = {}) {
-    if (muted || !context) return false;
+    if (muted || !context || !pageVisible) return false;
     const setting = CUE_SETTINGS[cue];
     if (!setting) {
       recordEvent({ cue, state: 'unknown' });
@@ -370,7 +499,7 @@ export function createAudioController() {
       group: setting.group,
       queuedAt: now,
     };
-    if (!unlocked || context?.state !== 'running' || status === 'loading') {
+    if (!isRunning() || !request.entry) {
       queuePlayback(request);
       preload();
       return true;
@@ -400,7 +529,21 @@ export function createAudioController() {
       // Storage is optional.
     }
     recordEvent({ cue: 'master', state: muted ? 'muted' : 'unmuted' });
-    window.dispatchEvent(new CustomEvent('arcade-rebuild-audio-change'));
+    notify();
+  }
+
+  function setPageVisible(value) {
+    pageVisible = Boolean(value);
+    if (!pageVisible) {
+      resumeAttempt = null;
+      unlocked = false;
+      needsGesture = true;
+      stopAllVoices();
+      for (const request of pending.splice(0)) {
+        recordEvent({ cue: request.cue, group: request.group, state: 'cancelled', reason: 'background' });
+      }
+    }
+    notify();
   }
 
   function setMasterGain(value) {
@@ -412,7 +555,14 @@ export function createAudioController() {
   function debugState() {
     return {
       status,
-      unlocked,
+      unlocked: isRunning(),
+      playbackState: playbackState(),
+      canPlay: !muted && isRunning() && buffers.size > 0,
+      needsGesture,
+      lastResumeError,
+      pageVisible,
+      warmByteCount: assetBytes.size,
+      contextTime: context?.currentTime || 0,
       contextState: context?.state || 'none',
       muted,
       masterGain,
@@ -453,7 +603,9 @@ export function createAudioController() {
 
   return {
     preload,
+    prewarm,
     unlock,
+    setPageVisible,
     play,
     setMuted,
     setMasterGain,
