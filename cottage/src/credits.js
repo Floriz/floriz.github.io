@@ -18,7 +18,6 @@ const sounds = [
   { title: 'water splash- small', creator: 'morganveilleux', url: 'https://freesound.org/s/390005/', ...cc0 },
   { title: 'Great Blue Heron.ogg', creator: 'US National Park Service', url: 'https://commons.wikimedia.org/wiki/File:Great_Blue_Heron.ogg', license: 'Public domain', licenseUrl: 'https://commons.wikimedia.org/wiki/File:Great_Blue_Heron.ogg#Licensing' },
   { title: 'Gull 2.ogg', creator: 'avphillips / PDSounds', url: 'https://commons.wikimedia.org/wiki/File:Gull_2.ogg', license: 'Public domain', licenseUrl: 'https://commons.wikimedia.org/wiki/File:Gull_2.ogg#Licensing' },
-  { title: 'Cow Moose field recording', creator: '© Linda Lötjönen', url: 'https://www.inaturalist.org/observations/228107348', license: 'CC BY 4.0', licenseUrl: 'https://creativecommons.org/licenses/by/4.0/' },
 ];
 const link = (url, label) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
 const trigger = document.querySelector('[data-credits-open]');
@@ -46,7 +45,7 @@ dialog.innerHTML = `
       <ul>${sounds.map(sound => `
         <li>${link(sound.url, sound.title)}<span class="credits-detail">${sound.creator} · ${link(sound.licenseUrl, sound.license)}</span></li>`).join('')}
       </ul>
-      <p class="credits-note">Recordings trimmed, filtered and mixed for the scene. Mink squeaks and UFO tones made here.</p>
+      <p class="credits-note">Recordings trimmed, filtered and mixed for the scene. Mink squeaks, Moose raspberry and UFO tones made here.</p>
     </section>
     <section aria-labelledby="credits-tools-title">
       <h3 id="credits-tools-title">Art &amp; audio tools</h3>

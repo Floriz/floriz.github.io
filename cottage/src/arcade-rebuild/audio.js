@@ -1,5 +1,5 @@
 const MANIFEST_URL = './assets/arcade-rebuild/current/audio/manifest.json';
-const CACHE_TOKEN = 'rebuild-v079-mink-squeak';
+const CACHE_TOKEN = 'rebuild-v112-moose-raspberry';
 const MUTE_STORAGE_KEY = 'arcade-rebuild-audio-muted';
 const MAX_PENDING_AGE_MS = 700;
 const PRELOAD_CUE_ORDER = [
@@ -31,7 +31,7 @@ const CUE_SETTINGS = {
   fish_emerge_splash: { label: 'Fishing: fish emerges', gain: 0.5, minInterval: 800, group: 'water_event', maxVoices: 1, rateRange: [0.99, 1.01] },
   release_splash: { label: 'Fishing: release splash', gain: 0.48, minInterval: 800, group: 'water_event', maxVoices: 1, rateRange: [0.99, 1.01] },
   mink_call: { label: 'Mink: playful double squeak', gain: 0.38, minInterval: 1200, group: 'wildlife_mink', maxVoices: 1, rateRange: [0.98, 1.02] },
-  moose_call: { label: 'Moose: distant call', gain: 0.3, minInterval: 1800, group: 'wildlife_moose', maxVoices: 1, rateRange: [0.98, 1.02] },
+  moose_call: { label: 'Moose: big mouth raspberry', gain: 0.3, minInterval: 1800, group: 'wildlife_moose', maxVoices: 1, rateRange: [0.98, 1.02] },
   ufo_beam_in: { label: 'Toronto: UFO beam in', gain: 0.22, minInterval: 700, group: 'ufo', maxVoices: 1, rateRange: [1, 1] },
   ufo_beam_out: { label: 'Toronto: UFO beam out', gain: 0.2, minInterval: 700, group: 'ufo', maxVoices: 1, rateRange: [1, 1] },
 };

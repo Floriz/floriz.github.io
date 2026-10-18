@@ -1,8 +1,8 @@
-import { createAudioController } from './audio.js?v=build-v100';
+import { createAudioController } from './audio.js?v=moose-audio-v112';
 import { createIdentityController } from './identity.js?v=build-v100';
 import { createRenderer } from './renderer.js?v=build-v100';
 import { isDevelopment } from './mode.js?v=build-v100';
-import { createWorld } from './world.js?v=bobber-bite-v108';
+import { createWorld } from './world.js?v=commentary-v113';
 
 const canvas = document.getElementById('rebuild-stage');
 const development = isDevelopment(location);

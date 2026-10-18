@@ -1,6 +1,6 @@
 import { selectAssets, textureEntries } from './asset-selection.js?v=build-v100';
 import { ANIMAL_LAB_DEFAULTS, ANIMAL_LAB_FAMILIES, ANIMAL_LAB_RECOMMENDED_VARIANTS, ANIMAL_LAB_STATES, ANIMAL_LAB_VARIANTS, ASSETS, BOBBER_VARIANTS, CLOUD_BLEND_MODES, COLORS, DOG_EASTER_EGG_DEFAULTS, ENTITY_DEFAULTS, FISH_DISPLAY_DEFAULTS, FISHING_TIMELINE, FOREGROUND_DOCK_SURFACE, HERON_DEFAULTS, LAYERS, LAYER_ASSETS, LAYOUT_DEFAULTS, REFLECTION_BLEND_MODES, REFLECTION_DEFAULTS, REFLECTION_DEPTH_ORDER, REFLECTION_SOURCE_OPTIONS, REFLECTION_VARIANT_PROFILES, RIG_DEFAULTS, SHIMMER_STYLES, VERSION, WATER_DEFAULTS, WILDLIFE_ACTIVE_FRAMES, WILDLIFE_FORCE_OPTIONS, WILDLIFE_TUNING_DEFAULTS } from './config.js?v=build-v100';
-import { FISHING_OUTCOMES, FISHING_SCRIPTS, chatboxLayout, drawChatbox, fishingLineForPhase } from './dialogue.js?v=build-v100';
+import { FISHING_OUTCOMES, FISHING_SCRIPTS, chatboxLayout, drawChatbox, fishingLineForPhase } from './dialogue.js?v=commentary-v113';
 import { clamp, curve, drawGrid, easeInOut, easeOut, lerp, line, pixel, rect } from './pixels.js?v=build-v100';
 
 const SOURCE_W = 418;
@@ -491,9 +491,30 @@ function bobberRigFor(phase, hookTarget, dip, outcome) {
   };
 }
 
-function drawBobberBiteSplash(g, phase, hookTarget, outcome) {
-  if (phase.name !== 'bite' || outcome.catchType === 'weeds') return;
-  drawSplash(g, Math.round(hookTarget.x), Math.round(hookTarget.y), (phase.p * 3) % 1, 0.4);
+function bobberRippleProgress(phase, teaseCount) {
+  if (phase.name === 'tease') return (phase.p * teaseCount * 2) % 1;
+  if (phase.name !== 'wait') return null;
+  const centers = teaseCount === 1 ? [0.68] : [0.42, 0.72];
+  for (const center of centers) {
+    const p = (phase.p - (center - 0.075)) / 0.26;
+    if (p >= 0 && p < 1) return p;
+  }
+  return null;
+}
+
+function drawBobberWaterMovement(g, phase, hookTarget, outcome, teaseCount) {
+  const x = Math.round(hookTarget.x);
+  const y = Math.round(hookTarget.y);
+  if (phase.name === 'bite' && outcome.catchType !== 'weeds') {
+    drawSplash(g, x, y, (phase.p * 3) % 1, 0.4);
+  }
+  const p = bobberRippleProgress(phase, teaseCount);
+  if (p === null) return;
+  const radius = 3 + Math.round(p * 3);
+  const alpha = (1 - p) * 0.5;
+  line(g, x - radius, y + 1, x - 3, y + 1, COLORS.lakeLight, alpha);
+  line(g, x + 3, y + 1, x + radius, y + 1, COLORS.lakeLight, alpha);
+  line(g, x - radius + 1, y + 3, x + radius - 1, y + 3, COLORS.lakeLight, alpha * 0.5);
 }
 
 function phaseAt(elapsed, timeline = FISHING_TIMELINE) {
@@ -1051,7 +1072,7 @@ export async function createWorld(root, renderer, audio, { development = false }
       dockSurfaceY,
       avatar: { ...base.avatar, y: dockSurfaceY },
       dog: { ...base.dog, y: dockSurfaceY },
-      castTarget: { ...base.castTarget, y: foregroundWaterY({ ...base, dockSurfaceY }) },
+      castTarget: { ...base.castTarget, y: foregroundWaterY({ ...base, dockSurfaceY }) + 2 },
     };
     layoutNow.castTarget = resolveFishingTarget(layoutNow, lastNow || performance.now());
     return layoutNow;
@@ -3571,7 +3592,7 @@ export async function createWorld(root, renderer, audio, { development = false }
         curve(g, rodTip, control, lineEnd, COLORS.line, 0.9);
       }
       if (anchors.bobber) drawBobber(g, anchors.bobber.x, anchors.bobber.y);
-      drawBobberBiteSplash(g, phase, hookTarget, fishing.outcome);
+      drawBobberWaterMovement(g, phase, hookTarget, fishing.outcome, fishing.teaseCount);
     }
     drawReelContactSplash(g, reelContactSplash, now);
 

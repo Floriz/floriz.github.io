@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" data-scene-state="static">
 <head>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'sha256-wq38ipHtFaX5KBLQUYSZx8gDSaNi87+FaGgY6kLarWA='; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'self'; worker-src 'self' blob:; media-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'sha256-NOaPRrD/GnF9KVfMFIZZkkwUXX4Ybz0Tk4mitlRsEJI='; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'self'; worker-src 'self' blob:; media-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
   <base href="/cottage/">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -127,11 +127,11 @@
   </main>
 
   <script type="module" src="./src/contact.js?v=build-v100"></script>
-  <script type="module" src="./src/credits.js?v=build-v100"></script>
+  <script type="module" src="./src/credits.js?v=moose-audio-v112"></script>
   <script src="./vendor/pixi.min.js" integrity="sha384-PfqUexIGfgbonrJB39NLcHnVpOBUTPqJuyUFMMGGlIc/mpa37XOOxPaEryh1S/h2"></script>
   <script type="module">
     document.querySelector('.fallback-note button').addEventListener('click', () => location.reload());
-    import(new URL('./src/arcade-rebuild/main.js?v=bobber-bite-v108', document.baseURI).href).catch((error) => {
+    import(new URL('./src/arcade-rebuild/main.js?v=commentary-v113', document.baseURI).href).catch((error) => {
       document.documentElement.dataset.sceneState = 'fallback';
       console.error('[arcade-rebuild] module failed', error);
     });

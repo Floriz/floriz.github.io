@@ -1,7 +1,7 @@
 import { COLORS } from './config.js?v=build-v100';
 import { rect, pixel } from './pixels.js?v=build-v100';
-export { FISHING_OUTCOMES, FISHING_SCRIPTS } from './fishing-scripts.js?v=build-v100';
-import { FISHING_OUTCOMES, FISHING_SCRIPTS } from './fishing-scripts.js?v=build-v100';
+export { FISHING_OUTCOMES, FISHING_SCRIPTS } from './fishing-scripts.js?v=commentary-v113';
+import { FISHING_OUTCOMES, FISHING_SCRIPTS } from './fishing-scripts.js?v=commentary-v113';
 
 const FONT = {
   A: ['01110', '10001', '11111', '10001', '10001'],
@@ -102,7 +102,7 @@ export function fishingLineForPhase(script, phase, species) {
   if (phase.name === 'tease') return formatLine(lines.tease ?? '', species);
   if (phase.name === 'bite') return formatLine(lines.bite ?? '', species);
   if (phase.name === 'reel') {
-    return formatLine(phase.p < 0.44 ? lines.reel : (lines.emerge ?? lines.reel ?? ''), species);
+    return formatLine(phase.p < 0.72 ? lines.reel : (lines.emerge ?? lines.reel ?? ''), species);
   }
   if (phase.name === 'hold') {
     return formatLine(phase.p < 0.5 ? lines.holdStart : lines.holdEnd, species);
